@@ -1,4 +1,7 @@
-import "../styles/main.css";
+import "../css/main.css";
+import "../css/bootstrap.css";
+import "../css/magnific-popup.css";
+import "../css/fonts.css";
 
 import { AppProps } from "next/app";
 
