@@ -14,7 +14,7 @@ const IndexPage = () => {
         <meta charSet="utf-8" />
         <meta name="description" content="Kate & Chris are getting married." />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>K&C Wedding</title>
+        <title>💍 K&C Wedding</title>
         <link
           href="https://fonts.googleapis.com/css?family=Playfair+Display"
           rel="stylesheet"
