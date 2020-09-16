@@ -56,19 +56,19 @@
 @keyframes spinner-color {
   0%,
   100% {
-    stroke: #e25d5d;
+    stroke: #636784;
   }
   20% {
     stroke: #df6e6e;
   }
   40% {
-    stroke: #e25d5d;
+    stroke: #636784;
   }
   60% {
     stroke: #df6e6e;
   }
   80% {
-    stroke: #e25d5d;
+    stroke: #636784;
   }
 }
 @keyframes spinner-dash {
@@ -340,7 +340,7 @@ ul.instafeed-list li a {
 /*Miscellaneous*/
 
 ::-moz-selection {
-  background: #e25d5d;
+  background: #636784;
   color: #ffffff;
 }
 .gradient-overlay:before {
@@ -433,7 +433,7 @@ a,
   vertical-align: middle;
   text-align: center;
   color: #fff;
-  background-color: #e25d5d;
+  background-color: #636784;
   width: 2.35rem;
   height: 2.35rem;
   font-size: 0.75rem;
@@ -507,16 +507,16 @@ h6 > a:hover,
   z-index: 100;
 }
 .bg-icon-primary {
-  background: rgba(226, 93, 93, 0.05) !important;
+  background: rgba(99, 103, 132, 0.05) !important;
 }
 .bg-icon-white {
   background: rgba(255, 255, 255, 0.1) !important;
 }
 .bg-primary-svg {
-  fill: #e25d5d;
+  fill: #636784;
 }
 .bg-secondary-svg {
-  fill: #fff9f5;
+  fill: #f8f9ff;
 }
 .bg-white-svg {
   fill: #ffffff;
@@ -543,7 +543,7 @@ h6 > a:hover,
   font-family: "Playfair Display", serif;
 }
 .card.bg-primary {
-  border-color: #e25d5d;
+  border-color: #636784;
 }
 .o-hidden {
   overflow: hidden;

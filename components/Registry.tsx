@@ -1,6 +1,6 @@
 const Registry = () => {
   return (
-    <section id="gift" className=" bg-primary">
+    <section id="gift" className="bg-primary">
       <div className="container spacer-double-lg">
         <div className="row justify-content-between z-index-3 position-relative align-items-center">
           <div className="col-md-6 mb-3 mb-md-0">

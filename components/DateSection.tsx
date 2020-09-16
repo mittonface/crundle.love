@@ -37,14 +37,14 @@ const DateSection = () => {
               >
                 <path
                   opacity="0.05"
-                  fill="#E35D5D"
+                  fill="#636784"
                   d="M493.9887,130.1238L493.9887,130.1238C419.5373,4.797,257.8407-37.3296,131.6182,36.1312
                             C4.3062,110.2269-37.5245,274.4576,36.6059,401.6698l215.8423,370.3983c28.1165,48.2495,90.0233,64.5706,138.2729,36.4541
                             l368.4115-214.6845c127.2958-74.1791,172.7084-240.1479,98.7059-367.5465C783.976,99.1337,621.0024,56.1091,493.9887,130.1238z"
                 />
                 <path
                   fill="none"
-                  stroke="#E35D5D"
+                  stroke="#636784"
                   stroke-width="3.1978"
                   stroke-miterlimit="10"
                   d="M151.0414,716.6817L151.0414,716.6817
@@ -54,7 +54,7 @@ const DateSection = () => {
                 />
                 <path
                   fill="none"
-                  stroke="#E35D5D"
+                  stroke="#636784"
                   stroke-width="2.7402"
                   stroke-miterlimit="10"
                   d="M186.6779,44.1803L186.6779,44.1803
@@ -91,7 +91,7 @@ const DateSection = () => {
                 <g>
                   <path
                     fill="none"
-                    stroke="#E35D5D"
+                    stroke="#636784"
                     stroke-width="7"
                     stroke-linecap="round"
                     stroke-miterlimit="10"
