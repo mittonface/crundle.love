@@ -1,7 +1,7 @@
 const Hero = () => {
   return (
     <section className="gradient-overlay gradient-overlay-dark ">
-      <img className="bg-image" src="assets/img/1.jpg" alt="" />
+      <img className="bg-image" src="assets/img/hero.jpg" alt="" />
 
       <div className="container">
         <div className="row min-vh-80 align-items-center z-index-2 position-relative text-center">

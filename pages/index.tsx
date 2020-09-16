@@ -83,17 +83,12 @@ const IndexPage = () => {
                     </li>
                     <li>
                       <a className=" nav-link scroll" href="#friends">
-                        Friends
+                        Wedding Party
                       </a>
                     </li>
                     <li>
                       <a className=" nav-link scroll" href="#rsvp">
                         Rsvp
-                      </a>
-                    </li>
-                    <li>
-                      <a className=" nav-link scroll" href="#location">
-                        Location
                       </a>
                     </li>
                   </ul>

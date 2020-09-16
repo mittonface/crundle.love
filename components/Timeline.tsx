@@ -45,7 +45,7 @@ const Timeline = () => {
                     mask="url(#mask-small-1)"
                     width="607"
                     height="532"
-                    xlinkHref="assets/img/mask-md.jpg"
+                    xlinkHref="assets/img/babies.jpg"
                   />
                 </svg>
               </div>
@@ -218,7 +218,7 @@ const Timeline = () => {
                     mask="url(#mask-small-2)"
                     width="607"
                     height="532"
-                    xlinkHref="assets/img/mask-md.jpg"
+                    xlinkHref="assets/img/family1.jpg"
                   />
                 </svg>
               </div>

@@ -10,9 +10,14 @@ const DateSection = () => {
                 Saturday August 28th, 2021 - Somewhere in Victoria
               </p>
               <p className="mb-4 pr-5">
-                At vero eos et accusamus et iusto odio dignissimos ducimus qui
-                blanditiis praesentium voluptatum deleniti atque corrupti quos
-                dolores et quas molestias excepturi sint occae.
+                You know, it really doesn’t matter what you write as long as
+                you’ve got a young, and beautiful, piece of text. The best taco
+                bowls are made in Trump Tower Grill. I love Hispanics!
+                <p>
+                  <strong>
+                    TODO: I'm going to put a little countdown clock here.
+                  </strong>
+                </p>
               </p>
               <div className="countdown row text-center"></div>
             </div>
@@ -81,7 +86,7 @@ const DateSection = () => {
                   mask="url(#mask)"
                   width="981"
                   height="885"
-                  xlinkHref="assets/img/mask-lg.jpg"
+                  xlinkHref="assets/img/walter.jpg"
                 />
                 <g>
                   <path
