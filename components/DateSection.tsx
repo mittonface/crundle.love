@@ -64,7 +64,7 @@ const DateSection = () => {
                 />
                 <path
                   fill="none"
-                  stroke="#E35D5D"
+                  stroke="#636784"
                   stroke-width="2.5752"
                   stroke-miterlimit="10"
                   d="M978.3951,400.8979
