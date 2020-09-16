@@ -138,13 +138,13 @@ const IndexPage = () => {
         </a>
       </div>
 
-      <script src="js/jquery-1.12.4.min.js"></script>
-      <script src="js/bootstrap.min.js"></script>
-      <script src="js/smooth-scroll.js"></script>
-      <script src="js/jquery.magnific-popup.min.js"></script>
-      <script src="js/jquery.countdown.min.js"></script>
-      <script src="js/placeholders.min.js"></script>
-      <script src="js/script.js"></script>
+      <script src="/js/jquery-1.12.4.min.js"></script>
+      <script src="/js/bootstrap.min.js"></script>
+      <script src="/js/smooth-scroll.js"></script>
+      <script src="/js/jquery.magnific-popup.min.js"></script>
+      <script src="/js/jquery.countdown.min.js"></script>
+      <script src="/js/placeholders.min.js"></script>
+      <script src="/js/script.js"></script>
     </>
   );
 };

@@ -13,12 +13,8 @@ const DateSection = () => {
                 You know, it really doesn’t matter what you write as long as
                 you’ve got a young, and beautiful, piece of text. The best taco
                 bowls are made in Trump Tower Grill. I love Hispanics!
-                <p>
-                  <strong>
-                    TODO: I'm going to put a little countdown clock here.
-                  </strong>
-                </p>
               </p>
+
               <div className="countdown row text-center"></div>
             </div>
           </div>
