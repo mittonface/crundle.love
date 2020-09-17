@@ -1,20 +1,49 @@
+import { getGithubPreviewProps, parseJson } from "next-tinacms-github";
+
 import DateSection from "../components/DateSection";
 import EventDetails from "../components/EventDetails";
 import Gallery from "../components/Gallery";
+import { GetStaticProps } from "next";
 import Head from "next/head";
 import Hero from "../components/Hero";
 import RSVP from "../components/RSVP";
 import Registry from "../components/Registry";
 import Timeline from "../components/Timeline";
 import WeddingParty from "../components/WeddingParty";
-const IndexPage = () => {
+
+export const getStaticProps: GetStaticProps = async function ({
+  preview,
+  previewData,
+}) {
+  if (preview) {
+    return getGithubPreviewProps({
+      ...previewData,
+      fileRelativePath: "content/site.json",
+      parse: parseJson,
+    });
+  }
+
+  return {
+    props: {
+      sourceProvider: null,
+      error: null,
+      preview: false,
+      file: {
+        fileRelativePath: "content/site.json",
+        data: (await import("../content/site.json")).default,
+      },
+    },
+  };
+};
+const IndexPage = ({ file }) => {
+  const data = file.data;
   return (
     <>
       <Head>
         <meta charSet="utf-8" />
         <meta name="description" content="Kate & Chris are getting married." />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>💍 K&C Wedding</title>
+        <title>{data.title}</title>
         <link
           href="https://fonts.googleapis.com/css?family=Playfair+Display"
           rel="stylesheet"
