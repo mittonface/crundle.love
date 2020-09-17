@@ -50,7 +50,7 @@ const WeddingParty = () => {
                 <h5 className="mb-0">
                   Amanda <s>Rundle</s> Bettle
                 </h5>
-                <span className="small">Maid of Honour </span>
+                <span className="small">Matron of Honour</span>
               </div>
             </div>
           </div>
