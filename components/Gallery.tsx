@@ -6,7 +6,7 @@ const Gallery = () => {
           <div className="row justify-content-center card-gutters">
             <div className="col-7 mb-3">
               <a
-                href="assets/img/gallery/1.jpg"
+                href="assets/img/gallery/1.JPG"
                 className="popup-image hover-effect d-block"
               >
                 <img
@@ -49,7 +49,7 @@ const Gallery = () => {
             </div>
             <div className="col-5 align-self-end mb-3">
               <a
-                href="assets/img/gallery/2.jpg"
+                href="assets/img/gallery/2.JPG"
                 className="popup-image hover-effect d-block"
               >
                 <img
@@ -97,7 +97,7 @@ const Gallery = () => {
               >
                 <img
                   className="img-fluid"
-                  src="assets/img/gallery/3.jpg"
+                  src="assets/img/gallery/3.JPG"
                   alt=""
                 />
                 <span className="hover-effect-container">
@@ -140,7 +140,7 @@ const Gallery = () => {
               >
                 <img
                   className="img-fluid"
-                  src="assets/img/gallery/4.jpg"
+                  src="assets/img/gallery/4.JPG"
                   alt=""
                 />
                 <span className="hover-effect-container">
