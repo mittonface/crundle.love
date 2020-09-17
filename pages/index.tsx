@@ -175,7 +175,7 @@ const IndexPage = ({ file }: { file: any }) => {
               x="0px"
               y="0px"
               viewBox="0 0 273.1091 238.2098"
-              enable-background="new 0 0 273.1091 238.2098"
+              enableBackground="new 0 0 273.1091 238.2098"
               xmlSpace="preserve"
             >
               <path

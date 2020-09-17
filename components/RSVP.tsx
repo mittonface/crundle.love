@@ -102,7 +102,7 @@ const RSVP = () => {
           x="0px"
           y="0px"
           viewBox="0 0 2560 168.6227"
-          enable-background="new 0 0 2560 168.6227"
+          enableBackground="new 0 0 2560 168.6227"
           xmlSpace="preserve"
         >
           <g></g>
@@ -125,7 +125,7 @@ const RSVP = () => {
             x="0px"
             y="0px"
             viewBox="0 0 135.7427 125.4471"
-            enable-background="new 0 0 135.7427 125.4471"
+            enableBackground="new 0 0 135.7427 125.4471"
             xmlSpace="preserve"
           >
             <g>
@@ -242,7 +242,7 @@ const RSVP = () => {
             x="0px"
             y="0px"
             viewBox="0 0 61.0903 58.3236"
-            enable-background="new 0 0 61.0903 58.3236"
+            enableBackground="new 0 0 61.0903 58.3236"
             xmlSpace="preserve"
           >
             <g>

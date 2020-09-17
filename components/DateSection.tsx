@@ -1,3 +1,5 @@
+import { InlineText } from "react-tinacms-inline";
+
 const DateSection = () => {
   return (
     <section id="resto" className=" ">
@@ -7,7 +9,7 @@ const DateSection = () => {
             <div className="pr-md-4">
               <h1 className="font-secondary display-4">Save the date</h1>
               <p className="lead font-weight-300 text-dark-gray opacity-8">
-                Saturday August 28th, 2021 - Somewhere in Victoria
+                <InlineText name="subheader"></InlineText>
               </p>
               <p className="mb-4 pr-5">
                 You know, it really doesn’t matter what you write as long as
@@ -28,7 +30,7 @@ const DateSection = () => {
                 x="0px"
                 y="0px"
                 viewBox="0 0 980.2914 884.5557"
-                enable-background="new 0 0 980.2914 884.5557"
+                enableBackground="new 0 0 980.2914 884.5557"
                 xmlSpace="preserve"
               >
                 <path
@@ -41,8 +43,8 @@ const DateSection = () => {
                 <path
                   fill="none"
                   stroke="#636784"
-                  stroke-width="3.1978"
-                  stroke-miterlimit="10"
+                  strokeWidth="3.1978"
+                  strokeMiterlimit="10"
                   d="M151.0414,716.6817L151.0414,716.6817
                             c-2.6854-4.5204-8.5175-6.0399-13.0702-3.3902c-4.592,2.6725-6.1008,8.5961-3.427,13.1844l7.7851,13.3598
                             c1.0141,1.7403,3.247,2.3289,4.9873,1.3148l13.2881-7.7433c4.5914-2.6756,6.2294-8.6618,3.5602-13.257
@@ -51,8 +53,8 @@ const DateSection = () => {
                 <path
                   fill="none"
                   stroke="#636784"
-                  stroke-width="2.7402"
-                  stroke-miterlimit="10"
+                  strokeWidth="2.7402"
+                  strokeMiterlimit="10"
                   d="M186.6779,44.1803L186.6779,44.1803
                             c-1.4613-2.4599-4.635-3.2867-7.1125-1.8449c-2.4988,1.4543-3.3199,4.6778-1.8649,7.1747l4.2365,7.2701
                             c0.5519,0.947,1.767,1.2674,2.714,0.7155l7.2311-4.2138c2.4985-1.456,3.3899-4.7136,1.9374-7.2141
@@ -61,8 +63,8 @@ const DateSection = () => {
                 <path
                   fill="none"
                   stroke="#636784"
-                  stroke-width="2.5752"
-                  stroke-miterlimit="10"
+                  strokeWidth="2.5752"
+                  strokeMiterlimit="10"
                   d="M978.3951,400.8979
                             c-0.5042,0.934-0.5042,2.0591,0,2.993c0.3052,0.4453,0.5839,0.9083,0.835,1.3862c0.5513,1.3705-0.4096,2.8669-1.3862,3.9854
                             c-0.6144,0.7089-1.3075,1.6697-0.8979,2.5203c0.1919,0.3133,0.4371,0.5904,0.7246,0.8192c2.0887,2.0325,2.1343,5.3734,0.1018,7.4622
@@ -88,9 +90,9 @@ const DateSection = () => {
                   <path
                     fill="none"
                     stroke="#636784"
-                    stroke-width="7"
-                    stroke-linecap="round"
-                    stroke-miterlimit="10"
+                    strokeWidth="7"
+                    strokeLinecap="round"
+                    strokeMiterlimit="10"
                     d="M747.8805,524.349
                                c108.1955-68.637,139.1927-213.677,70.5558-321.8725S606.4696,62.2462,498.2741,130.8832l0,0"
                   />
@@ -111,7 +113,7 @@ const DateSection = () => {
           x="0px"
           y="0px"
           viewBox="0 0 2560 168.6227"
-          enable-background="new 0 0 2560 168.6227"
+          enableBackground="new 0 0 2560 168.6227"
           xmlSpace="preserve"
         >
           <g></g>

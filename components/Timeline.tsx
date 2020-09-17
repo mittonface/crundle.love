@@ -28,7 +28,7 @@ const Timeline = () => {
                   x="0px"
                   y="0px"
                   viewBox="0 0 607 532"
-                  enable-background="new 0 0 607 532"
+                  enableBackground="new 0 0 607 532"
                   xmlSpace="preserve"
                 >
                   <defs>
@@ -65,7 +65,7 @@ const Timeline = () => {
                     x="0px"
                     y="0px"
                     viewBox="0 0 107 93"
-                    enable-background="new 0 0 107 93"
+                    enableBackground="new 0 0 107 93"
                     xmlSpace="preserve"
                   >
                     <path
@@ -91,7 +91,7 @@ const Timeline = () => {
                     x="0px"
                     y="0px"
                     viewBox="0 0 107 93"
-                    enable-background="new 0 0 107 93"
+                    enableBackground="new 0 0 107 93"
                     xmlSpace="preserve"
                   >
                     <path
@@ -117,7 +117,7 @@ const Timeline = () => {
                     x="0px"
                     y="0px"
                     viewBox="0 0 107 93"
-                    enable-background="new 0 0 107 93"
+                    enableBackground="new 0 0 107 93"
                     xmlSpace="preserve"
                   >
                     <path
@@ -143,7 +143,7 @@ const Timeline = () => {
                     x="0px"
                     y="0px"
                     viewBox="0 0 107 93"
-                    enable-background="new 0 0 107 93"
+                    enableBackground="new 0 0 107 93"
                     xmlSpace="preserve"
                   >
                     <path
@@ -175,7 +175,7 @@ const Timeline = () => {
                   x="0px"
                   y="0px"
                   viewBox="0 0 607 532"
-                  enable-background="new 0 0 607 532"
+                  enableBackground="new 0 0 607 532"
                   xmlSpace="preserve"
                 >
                   <defs>
@@ -216,7 +216,7 @@ const Timeline = () => {
           x="0px"
           y="0px"
           viewBox="0 0 2560 168.6227"
-          enable-background="new 0 0 2560 168.6227"
+          enableBackground="new 0 0 2560 168.6227"
           xmlSpace="preserve"
         >
           <g></g>

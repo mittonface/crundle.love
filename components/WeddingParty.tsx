@@ -25,7 +25,7 @@ const WeddingParty = () => {
                   x="0px"
                   y="0px"
                   viewBox="0 0 607 532"
-                  enable-background="new 0 0 607 532"
+                  enableBackground="new 0 0 607 532"
                   xmlSpace="preserve"
                 >
                   <defs>
@@ -66,7 +66,7 @@ const WeddingParty = () => {
                   x="0px"
                   y="0px"
                   viewBox="0 0 607 532"
-                  enable-background="new 0 0 607 532"
+                  enableBackground="new 0 0 607 532"
                   xmlSpace="preserve"
                 >
                   <defs>
@@ -111,7 +111,7 @@ const WeddingParty = () => {
           x="0px"
           y="0px"
           viewBox="0 0 2560 168.6227"
-          enable-background="new 0 0 2560 168.6227"
+          enableBackground="new 0 0 2560 168.6227"
           xmlSpace="preserve"
         >
           <g></g>

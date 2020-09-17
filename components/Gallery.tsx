@@ -23,7 +23,7 @@ const Gallery = () => {
                       x="0px"
                       y="0px"
                       viewBox="0 0 73.6404 64.5606"
-                      enable-background="new 0 0 73.6404 64.5606"
+                      enableBackground="new 0 0 73.6404 64.5606"
                       xmlSpace="preserve"
                     >
                       <g>
@@ -66,7 +66,7 @@ const Gallery = () => {
                       x="0px"
                       y="0px"
                       viewBox="0 0 73.6404 64.5606"
-                      enable-background="new 0 0 73.6404 64.5606"
+                      enableBackground="new 0 0 73.6404 64.5606"
                       xmlSpace="preserve"
                     >
                       <g>
@@ -109,7 +109,7 @@ const Gallery = () => {
                       x="0px"
                       y="0px"
                       viewBox="0 0 73.6404 64.5606"
-                      enable-background="new 0 0 73.6404 64.5606"
+                      enableBackground="new 0 0 73.6404 64.5606"
                       xmlSpace="preserve"
                     >
                       <g>
@@ -152,7 +152,7 @@ const Gallery = () => {
                       x="0px"
                       y="0px"
                       viewBox="0 0 73.6404 64.5606"
-                      enable-background="new 0 0 73.6404 64.5606"
+                      enableBackground="new 0 0 73.6404 64.5606"
                       xmlSpace="preserve"
                     >
                       <g>
@@ -195,7 +195,7 @@ const Gallery = () => {
                       x="0px"
                       y="0px"
                       viewBox="0 0 73.6404 64.5606"
-                      enable-background="new 0 0 73.6404 64.5606"
+                      enableBackground="new 0 0 73.6404 64.5606"
                       xmlSpace="preserve"
                     >
                       <g>
@@ -233,7 +233,7 @@ const Gallery = () => {
           x="0px"
           y="0px"
           viewBox="0 0 2560 168.6227"
-          enable-background="new 0 0 2560 168.6227"
+          enableBackground="new 0 0 2560 168.6227"
           xmlSpace="preserve"
         >
           <g></g>

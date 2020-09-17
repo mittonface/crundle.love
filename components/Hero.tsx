@@ -12,7 +12,7 @@ const Hero = () => {
               <InlineText name="header"></InlineText>
             </h1>
             <p className="font-weight-300 text-light  lead mb-5 ">
-              Saturday August 28th, 2021 - Somewhere in Victoria
+              <InlineText name="subheader"></InlineText>
             </p>
             <a
               href="#rsvp"
@@ -33,7 +33,7 @@ const Hero = () => {
           x="0px"
           y="0px"
           viewBox="0 0 2560 168.6227"
-          enable-background="new 0 0 2560 168.6227"
+          enableBackground="new 0 0 2560 168.6227"
           xmlSpace="preserve"
         >
           <g></g>
