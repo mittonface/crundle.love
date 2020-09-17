@@ -35,7 +35,7 @@ export const getStaticProps: GetStaticProps = async function ({
     },
   };
 };
-const IndexPage = ({ file }) => {
+const IndexPage = ({ file }: { file: any }) => {
   const data = file.data;
   return (
     <>
