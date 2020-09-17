@@ -2,6 +2,7 @@ import { getGithubPreviewProps, parseJson } from "next-tinacms-github";
 
 import DateSection from "../components/DateSection";
 import EventDetails from "../components/EventDetails";
+import Footer from "../components/Footer";
 import Gallery from "../components/Gallery";
 import { GetStaticProps } from "next";
 import Head from "next/head";
@@ -147,6 +148,7 @@ const IndexPage = ({ file }: { file: any }) => {
         <Registry />
         <WeddingParty />
         <RSVP />
+        <Footer />
 
         <a className="scroll-to-top scroll" href="#wrapper">
           <svg
