@@ -1,20 +1,59 @@
+import { getGithubPreviewProps, parseJson } from "next-tinacms-github";
+
 import DateSection from "../components/DateSection";
 import EventDetails from "../components/EventDetails";
+import Footer from "../components/Footer";
 import Gallery from "../components/Gallery";
+import { GetStaticProps } from "next";
 import Head from "next/head";
 import Hero from "../components/Hero";
 import RSVP from "../components/RSVP";
 import Registry from "../components/Registry";
 import Timeline from "../components/Timeline";
 import WeddingParty from "../components/WeddingParty";
-const IndexPage = () => {
+import { useGithubJsonForm } from "react-tinacms-github";
+import { usePlugin } from "tinacms";
+
+export const getStaticProps: GetStaticProps = async function ({
+  preview,
+  previewData,
+}) {
+  if (preview) {
+    return getGithubPreviewProps({
+      ...previewData,
+      fileRelativePath: "content/site.json",
+      parse: parseJson,
+    });
+  }
+
+  return {
+    props: {
+      sourceProvider: null,
+      error: null,
+      preview: false,
+      file: {
+        fileRelativePath: "content/site.json",
+        data: (await import("../content/site.json")).default,
+      },
+    },
+  };
+};
+const IndexPage = ({ file }: { file: any }) => {
+  const formOptions = {
+    label: "KC Wedding Site",
+    fields: [{ name: "title", component: "text" }],
+  };
+
+  const [data, form] = useGithubJsonForm(file, formOptions);
+  usePlugin(form);
+
   return (
     <>
       <Head>
         <meta charSet="utf-8" />
         <meta name="description" content="Kate & Chris are getting married." />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>💍 K&C Wedding</title>
+        <title>{data.title}</title>
         <link
           href="https://fonts.googleapis.com/css?family=Playfair+Display"
           rel="stylesheet"
@@ -109,6 +148,7 @@ const IndexPage = () => {
         <Registry />
         <WeddingParty />
         <RSVP />
+        <Footer />
 
         <a className="scroll-to-top scroll" href="#wrapper">
           <svg
