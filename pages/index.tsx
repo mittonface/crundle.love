@@ -10,6 +10,8 @@ import RSVP from "../components/RSVP";
 import Registry from "../components/Registry";
 import Timeline from "../components/Timeline";
 import WeddingParty from "../components/WeddingParty";
+import { useGithubJsonForm } from "react-tinacms-github";
+import { usePlugin } from "tinacms";
 
 export const getStaticProps: GetStaticProps = async function ({
   preview,
@@ -36,7 +38,14 @@ export const getStaticProps: GetStaticProps = async function ({
   };
 };
 const IndexPage = ({ file }: { file: any }) => {
-  const data = file.data;
+  const formOptions = {
+    label: "KC Wedding Site",
+    fields: [{ name: "title", component: "text" }],
+  };
+
+  const [data, form] = useGithubJsonForm(file, formOptions);
+  usePlugin(form);
+
   return (
     <>
       <Head>
