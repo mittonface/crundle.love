@@ -1,3 +1,5 @@
+import { InlineText } from "react-tinacms-inline";
+
 const Hero = () => {
   return (
     <section className="gradient-overlay gradient-overlay-dark ">
@@ -6,7 +8,9 @@ const Hero = () => {
       <div className="container">
         <div className="row min-vh-80 align-items-center z-index-2 position-relative text-center">
           <div className="col-12">
-            <h1 className="display-2  text-white mb-4">Kate &amp; Chris</h1>
+            <h1 className="display-2  text-white mb-4">
+              <InlineText name="header"></InlineText>
+            </h1>
             <p className="font-weight-300 text-light  lead mb-5 ">
               Saturday August 28th, 2021 - Somewhere in Victoria
             </p>
