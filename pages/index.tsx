@@ -1,4 +1,8 @@
 import { getGithubPreviewProps, parseJson } from "next-tinacms-github";
+import {
+  useGithubJsonForm,
+  useGithubToolbarPlugins,
+} from "react-tinacms-github";
 
 import DateSection from "../components/DateSection";
 import EventDetails from "../components/EventDetails";
@@ -11,7 +15,6 @@ import RSVP from "../components/RSVP";
 import Registry from "../components/Registry";
 import Timeline from "../components/Timeline";
 import WeddingParty from "../components/WeddingParty";
-import { useGithubJsonForm } from "react-tinacms-github";
 import { usePlugin } from "tinacms";
 
 export const getStaticProps: GetStaticProps = async function ({
@@ -46,7 +49,7 @@ const IndexPage = ({ file }: { file: any }) => {
 
   const [data, form] = useGithubJsonForm(file, formOptions);
   usePlugin(form);
-
+  useGithubToolbarPlugins();
   return (
     <>
       <Head>
