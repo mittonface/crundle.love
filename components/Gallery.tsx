@@ -6,12 +6,12 @@ const Gallery = () => {
           <div className="row justify-content-center card-gutters">
             <div className="col-7 mb-3">
               <a
-                href="assets/img/offset/large/1.jpg"
+                href="assets/img/gallery/1.jpg"
                 className="popup-image hover-effect d-block"
               >
                 <img
                   className="img-fluid"
-                  src="assets/img/offset/1.jpg"
+                  src="assets/img/gallery/1.JPG"
                   alt=""
                 />
                 <span className="hover-effect-container">
@@ -49,12 +49,12 @@ const Gallery = () => {
             </div>
             <div className="col-5 align-self-end mb-3">
               <a
-                href="assets/img/offset/large/2.jpg"
+                href="assets/img/gallery/2.jpg"
                 className="popup-image hover-effect d-block"
               >
                 <img
                   className="img-fluid"
-                  src="assets/img/offset/2.jpg"
+                  src="assets/img/gallery/2.JPG"
                   alt=""
                 />
                 <span className="hover-effect-container">
@@ -92,12 +92,12 @@ const Gallery = () => {
             </div>
             <div className="col-5">
               <a
-                href="assets/img/offset/large/3.jpg"
+                href="assets/img/gallery/3.JPG"
                 className="popup-image hover-effect d-block"
               >
                 <img
                   className="img-fluid"
-                  src="assets/img/offset/3.jpg"
+                  src="assets/img/gallery/3.jpg"
                   alt=""
                 />
                 <span className="hover-effect-container">
@@ -135,12 +135,12 @@ const Gallery = () => {
             </div>
             <div className="col-3">
               <a
-                href="assets/img/offset/large/4.jpg "
+                href="assets/img/gallery/4.JPG"
                 className="popup-image hover-effect d-block"
               >
                 <img
                   className="img-fluid"
-                  src="assets/img/offset/4.jpg"
+                  src="assets/img/gallery/4.jpg"
                   alt=""
                 />
                 <span className="hover-effect-container">
@@ -178,12 +178,12 @@ const Gallery = () => {
             </div>
             <div className="col-3">
               <a
-                href="assets/img/offset/large/5.jpg"
+                href="assets/img/gallery/5.JPG"
                 className="popup-image hover-effect d-block"
               >
                 <img
                   className="img-fluid"
-                  src="assets/img/offset/5.jpg"
+                  src="assets/img/gallery/5.JPG"
                   alt=""
                 />
                 <span className="hover-effect-container">
