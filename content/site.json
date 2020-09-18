@@ -3,15 +3,5 @@
   "header": "Kate & Chris",
   "subheader": "Saturday August 28th, 2021 - Victoria, PE",
   "saveDateText": "We would love it if you came to our wedding!",
-  "giftRegistryText": "Buy us some spoons or a toaster.",
-  "blocks": [
-    {
-      "_template": "dateSection",
-      "saveDateText": "We would love it if you came to our wedding!",
-      "subheader": "Saturday August 28th, 2021 - Victoria, PE"
-    },
-    {
-      "_template": "timelineSection"
-    }
-  ]
+  "giftRegistryText": "Buy us some spoons or a toaster."
 }

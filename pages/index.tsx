@@ -1,33 +1,23 @@
-import DateSection, { date_section_template } from "../components/DateSection";
-import { InlineBlocks, InlineForm } from "react-tinacms-inline";
-import Timeline, { timeline_section_template } from "../components/Timeline";
 import { getGithubPreviewProps, parseJson } from "next-tinacms-github";
 import {
   useGithubJsonForm,
   useGithubToolbarPlugins,
 } from "react-tinacms-github";
 
+import DateSection from "../components/DateSection";
 import EventDetails from "../components/EventDetails";
 import Footer from "../components/Footer";
 import Gallery from "../components/Gallery";
 import { GetStaticProps } from "next";
 import Head from "next/head";
 import Hero from "../components/Hero";
+import { InlineForm } from "react-tinacms-inline";
 import RSVP from "../components/RSVP";
 import Registry from "../components/Registry";
+import Timeline from "../components/Timeline";
 import WeddingParty from "../components/WeddingParty";
 import { usePlugin } from "tinacms";
 
-const PAGE_BLOCKS = {
-  dateSection: {
-    Component: DateSection,
-    template: date_section_template,
-  },
-  timelineSection: {
-    Component: Timeline,
-    template: timeline_section_template,
-  },
-};
 export const getStaticProps: GetStaticProps = async function ({
   preview,
   previewData,
@@ -165,8 +155,8 @@ const IndexPage = ({ file }: { file: any }) => {
           </header>
 
           <Hero />
-
-          <InlineBlocks name="blocks" blocks={PAGE_BLOCKS} />
+          <DateSection />
+          <Timeline />
           <EventDetails />
           <Gallery />
           <Registry />
