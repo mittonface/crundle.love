@@ -1,5 +1,6 @@
+import { InlineText, InlineTextarea } from "react-tinacms-inline";
+
 import CountDown from "./Countdown";
-import { InlineText } from "react-tinacms-inline";
 
 const DateSection = () => {
   return (
@@ -13,9 +14,7 @@ const DateSection = () => {
                 <InlineText name="subheader" />
               </p>
               <p className="mb-4 pr-5">
-                You know, it really doesn’t matter what you write as long as
-                you’ve got a young, and beautiful, piece of text. The best taco
-                bowls are made in Trump Tower Grill. I love Hispanics!
+                <InlineTextarea name="saveDateText" />
               </p>
 
               <div className="countdown row text-center">

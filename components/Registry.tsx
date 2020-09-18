@@ -1,3 +1,5 @@
+import { InlineTextarea } from "react-tinacms-inline";
+
 const Registry = () => {
   return (
     <section id="gift" className="bg-primary">
@@ -6,11 +8,7 @@ const Registry = () => {
           <div className="col-md-6 mb-3 mb-md-0">
             <h1 className="display-4 text-white">Gift Registry</h1>
             <p className="lead text-white mb-0">
-              He’s not a word hero. He’s a word hero because he was captured. I
-              like text that wasn’t captured. The best taco bowls are made in
-              Trump Tower Grill. I love Hispanics! My text is long and
-              beautiful, as, it has been well documented, are various other
-              parts of my website.
+              <InlineTextarea name="giftRegistryText" />
             </p>
           </div>
           <div className="col-md-5"></div>

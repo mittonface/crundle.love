@@ -45,10 +45,7 @@ export const getStaticProps: GetStaticProps = async function ({
 const IndexPage = ({ file }: { file: any }) => {
   const formOptions = {
     label: "KC Wedding Site",
-    fields: [
-      { name: "title", component: "text" },
-      { name: "header", component: "text" },
-    ],
+    fields: [{ name: "title", component: "text" }],
   };
 
   const [data, form] = useGithubJsonForm(file, formOptions);
