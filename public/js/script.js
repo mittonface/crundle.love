@@ -53,18 +53,4 @@
     speed: 800,
     offset: -180,
   });
-
-  $(".countdown")
-    .countdown("2021/8/28")
-    .on("update.countdown", function (event) {
-      var $this = $(this).html(
-        event.strftime(
-          "" +
-            '<div class="col"><div class="card card-body countdown-shadow mb-4 mb-lg-0 p-3"><span class="counter text-primary mb-1 ">%D</span> <span class="label ">Day%!d</span></div></div> ' +
-            '<div class="col"><div class="card card-body countdown-shadow mb-4 mb-lg-0 p-3"><span class="counter text-primary mb-1">%H</span> <span class="label">Hour%!H</span></div></div> ' +
-            '<div class="col"><div class="card card-body countdown-shadow mb-4 mb-lg-0 p-3"><span class="counter text-primary mb-1">%M</span> <span class="label">Minute%!M</span></div></div> ' +
-            '<div class="col"><div class="card card-body countdown-shadow p-3"><span class="counter text-primary mb-1">%S</span> <span class="label">Second%!S</span></div></div>'
-        )
-      );
-    });
 })(jQuery);

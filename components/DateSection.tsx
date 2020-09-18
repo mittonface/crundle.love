@@ -1,3 +1,4 @@
+import CountDown from "./Countdown";
 import { InlineText } from "react-tinacms-inline";
 
 const DateSection = () => {
@@ -9,7 +10,7 @@ const DateSection = () => {
             <div className="pr-md-4">
               <h1 className="font-secondary display-4">Save the date</h1>
               <p className="lead font-weight-300 text-dark-gray opacity-8">
-                <InlineText name="subheader"></InlineText>
+                <InlineText name="subheader" />
               </p>
               <p className="mb-4 pr-5">
                 You know, it really doesn’t matter what you write as long as
@@ -17,7 +18,9 @@ const DateSection = () => {
                 bowls are made in Trump Tower Grill. I love Hispanics!
               </p>
 
-              <div className="countdown row text-center"></div>
+              <div className="countdown row text-center">
+                <CountDown />
+              </div>
             </div>
           </div>
           <div className="col-md-6">
