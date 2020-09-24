@@ -6,9 +6,7 @@ const EventDetails = () => {
           <div className="col">
             <div className=" text-center mb-5 pb-5">
               <h1 className="display-4 mb-0">Wedding Events</h1>
-              <p className="w-md-40 mb-0 mx-auto text-dark-gray opacity-8 ">
-                Main ceremony - Wedding party
-              </p>
+              <p className="w-md-40 mb-0 mx-auto text-dark-gray opacity-8 "></p>
             </div>
           </div>
         </div>
@@ -126,7 +124,9 @@ const EventDetails = () => {
                   />
                 </svg>
               </div>
-              <h5 className="mb-0 text-white">Wedding Party</h5>
+              <h5 className="mb-0 text-white">
+                How Many Events Do Weddings Have?
+              </h5>
               <h6 className="mb-5 text-white">4:20pm - 6:90pm</h6>
               <p className="text-align-center">
                 Somewhere
@@ -335,11 +335,11 @@ const EventDetails = () => {
               <h5 className="mb-0">Ceremony</h5>
               <h6 className="mb-5">4:20pm - 6:90pm</h6>
               <p className="text-align-center">
-                Somewhere
+                The Grand Victorian
                 <br />
-                In Victoria
+                106 Nelson Street
                 <br />
-                H0H 0H0
+                Victoria, PEI
               </p>
             </div>
           </div>
@@ -456,14 +456,14 @@ const EventDetails = () => {
                   />
                 </svg>
               </div>
-              <h5 className="mb-0 text-white">Wedding Party</h5>
+              <h5 className="mb-0 text-white">Reception</h5>
               <h6 className="mb-5 text-white">4:20pm - 6:90pm</h6>
               <p className="text-align-center">
-                Somewhere
+                The Grand Victorian
                 <br />
-                In Victoria
+                106 Nelson Street
                 <br />
-                H0H 0H0
+                Victoria, PEI
               </p>
             </div>
           </div>

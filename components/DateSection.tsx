@@ -7,12 +7,10 @@ const DateSection = () => {
             <div className="pr-md-4">
               <h1 className="font-secondary display-4">Save the date</h1>
               <p className="lead font-weight-300 text-dark-gray opacity-8">
-                Saturday August 28th, 2021 - Somewhere in Victoria
+                Saturday August 28th, 2021 - Victoria, PEI
               </p>
               <p className="mb-4 pr-5">
-                You know, it really doesn’t matter what you write as long as
-                you’ve got a young, and beautiful, piece of text. The best taco
-                bowls are made in Trump Tower Grill. I love Hispanics!
+                Please come to our wedding, it would be very cool if you did.
               </p>
 
               <div className="countdown row text-center"></div>

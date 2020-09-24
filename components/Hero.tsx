@@ -8,7 +8,7 @@ const Hero = () => {
           <div className="col-12">
             <h1 className="display-2  text-white mb-4">Kate &amp; Chris</h1>
             <p className="font-weight-300 text-light  lead mb-5 ">
-              Saturday August 28th, 2021 - Somewhere in Victoria
+              Saturday August 28th, 2021 - Victoria, PEI
             </p>
             <a
               href="#rsvp"
