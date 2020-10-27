@@ -11,12 +11,7 @@ const Hero = () => {
           media="(min-width: 951px)"
           srcSet="assets/img/hero_desktop.jpg"
         />
-        <Image
-          className="bg-image"
-          unsized
-          src="/assets/img/hero_desktop.jpg"
-          alt=""
-        />
+        <img className="bg-image" src="/assets/img/hero_desktop.jpg" alt="" />
       </picture>
 
       <div className="container">
