@@ -1,5 +1,3 @@
-import Image from "next/image";
-
 const DateSection = () => {
   return (
     <section id="resto" className=" ">
