@@ -1,3 +1,4 @@
+import Image from "next/image";
 const Hero = () => {
   return (
     <section className="gradient-overlay gradient-overlay-dark ">
@@ -10,7 +11,12 @@ const Hero = () => {
           media="(min-width: 951px)"
           srcSet="assets/img/hero_desktop.jpg"
         />
-        <img className="bg-image" src="assets/img/hero_desktop.jpg" alt="" />
+        <Image
+          className="bg-image"
+          unsized
+          src="/assets/img/hero_desktop.jpg"
+          alt=""
+        />
       </picture>
 
       <div className="container">

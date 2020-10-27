@@ -1,3 +1,4 @@
+import Image from "next/image";
 const Gallery = () => {
   return (
     <section id="gallery" className="bg-secondary ">
@@ -9,10 +10,11 @@ const Gallery = () => {
                 href="assets/img/gallery/2.JPG"
                 className="popup-image hover-effect d-block"
               >
-                <img
+                <Image
                   className="img-fluid"
-                  src="assets/img/gallery/2_preview.jpg"
+                  src="/assets/img/gallery/2_preview.jpg"
                   alt=""
+                  unsized
                 />
                 <span className="hover-effect-container">
                   <span className="hover-effect-icon has-svg">
@@ -52,10 +54,11 @@ const Gallery = () => {
                 href="assets/img/gallery/1.JPG"
                 className="popup-image hover-effect d-block"
               >
-                <img
+                <Image
                   className="img-fluid"
-                  src="assets/img/gallery/1_preview.jpg"
+                  src="/assets/img/gallery/1_preview.jpg"
                   alt=""
+                  unsized
                 />
                 <span className="hover-effect-container">
                   <span className="hover-effect-icon has-svg">
@@ -95,10 +98,11 @@ const Gallery = () => {
                 href="assets/img/gallery/3.JPG"
                 className="popup-image hover-effect d-block"
               >
-                <img
+                <Image
                   className="img-fluid"
-                  src="assets/img/gallery/3_preview.jpg"
+                  src="/assets/img/gallery/3_preview.jpg"
                   alt=""
+                  unsized
                 />
                 <span className="hover-effect-container">
                   <span className="hover-effect-icon has-svg">
@@ -138,10 +142,11 @@ const Gallery = () => {
                 href="assets/img/gallery/5.JPG"
                 className="popup-image hover-effect d-block"
               >
-                <img
+                <Image
                   className="img-fluid"
-                  src="assets/img/gallery/5_preview.jpg"
+                  src="/assets/img/gallery/5_preview.jpg"
                   alt=""
+                  unsized
                 />
                 <span className="hover-effect-container">
                   <span className="hover-effect-icon has-svg">
@@ -181,10 +186,11 @@ const Gallery = () => {
                 href="assets/img/gallery/4.JPG"
                 className="popup-image hover-effect d-block"
               >
-                <img
+                <Image
                   className="img-fluid"
-                  src="assets/img/gallery/4_preview.jpg"
+                  src="/assets/img/gallery/4_preview.jpg"
                   alt=""
+                  unsized
                 />
                 <span className="hover-effect-container">
                   <span className="hover-effect-icon has-svg">
