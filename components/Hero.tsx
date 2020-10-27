@@ -1,4 +1,3 @@
-import Image from "next/image";
 const Hero = () => {
   return (
     <section className="gradient-overlay gradient-overlay-dark ">
