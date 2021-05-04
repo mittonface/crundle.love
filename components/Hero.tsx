@@ -5,8 +5,6 @@ type HeroProps = {
 };
 
 const Hero = ({ heroDoc }: HeroProps) => {
-  console.log("hero");
-  console.log(heroDoc);
   return (
     <section className="gradient-overlay gradient-overlay-dark ">
       <picture>

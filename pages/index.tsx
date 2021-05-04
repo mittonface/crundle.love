@@ -69,9 +69,6 @@ export type PageQueryResponseType = {
 };
 
 const IndexPage = (props: PageQueryResponseType) => {
-  console.log("hi?");
-  console.log(props.getDateDocument);
-  console.log(props.getTimelineDocument);
   return (
     <>
       <Head>

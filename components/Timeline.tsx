@@ -5,9 +5,6 @@ type TimelineProps = {
   timelineDoc: Timeline_Document;
 };
 const Timeline = ({ timelineDoc }: TimelineProps) => {
-  console.log("HELLO");
-  console.log(timelineDoc);
-  console.log(timelineDoc.__typename);
   return (
     <section id="story" className=" bg-secondary spacer-one-top-lg">
       <div className="container spacer-one-bottom-lg">
