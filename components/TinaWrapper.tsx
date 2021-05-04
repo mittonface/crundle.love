@@ -2,7 +2,11 @@ import React from "react";
 import { TinaCMS } from "tinacms";
 import { TinaCloudAuthWall } from "tina-graphql-gateway";
 import { createClient } from "../utils";
-const TinaWrapper = ({ children }) => {
+
+type TinaWrapperProps = {
+  children: React.ReactNode;
+};
+const TinaWrapper = ({ children }: TinaWrapperProps) => {
   const cms = React.useMemo(() => {
     return new TinaCMS({
       apis: {
