@@ -2,9 +2,9 @@
   "name": "with-typescript",
   "version": "1.0.0",
   "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start",
+    "dev": "yarn tina-gql server:start -c \"next dev\"",
+    "build": "yarn tina-gql server:start -c \"next build\"",
+    "start": "yarn tina-gql server:start -c \"next start\"",
     "type-check": "tsc"
   },
   "dependencies": {
