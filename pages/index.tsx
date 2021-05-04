@@ -1,7 +1,6 @@
 import {
   Date_Document,
   Hero_Document,
-  Timeline_Doc_Data,
   Timeline_Document,
 } from "../.tina/__generated__/types";
 
