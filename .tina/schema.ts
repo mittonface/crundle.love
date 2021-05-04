@@ -8,13 +8,18 @@ export default defineSchema({
       path: "content/hero",
       templates: [
         {
-          label: "Main",
-          name: "main",
+          label: "Hero",
+          name: "hero",
           fields: [
             {
               type: "text",
-              label: "main",
-              name: "main",
+              label: "Hero Text",
+              name: "hero",
+            },
+            {
+              type: "text",
+              label: "Sub Hero",
+              name: "sub_hero",
             },
           ],
         },

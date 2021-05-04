@@ -4,7 +4,7 @@ sections:
     name: hero
     path: content/hero
     templates:
-      - main
+      - hero
     type: directory
     create: documents
     match: '**/*.md'

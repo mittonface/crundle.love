@@ -24,8 +24,9 @@ export const query = (gql: any) => gql`
     getHeroDocument(relativePath: "main.md") {
       data {
         __typename
-        ... on Main_Doc_Data {
-          main
+        ... on Hero_Doc_Data {
+          hero
+          sub_hero
           _body
         }
       }

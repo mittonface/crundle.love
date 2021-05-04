@@ -1,0 +1,10 @@
+---
+label: Hero
+name: hero
+fields:
+  - type: text
+    label: Hero Text
+    name: hero
+  - type: text
+    label: Sub Hero
+    name: sub_hero

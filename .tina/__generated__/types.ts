@@ -127,15 +127,15 @@ export type QueryGetHeroDocumentArgs = {
   relativePath?: Maybe<Scalars['String']>;
 };
 
-export type Hero_Data = Main_Doc_Data;
+export type Hero_Data = Hero_Doc_Data;
 
 export type Hero_Input = {
-  main?: Maybe<Main_Doc_Input>;
+  hero?: Maybe<Hero_Doc_Input>;
 };
 
-export type Hero_Values = Main_Doc_Values;
+export type Hero_Values = Hero_Doc_Values;
 
-export type Hero_Form = Main_Doc_Form;
+export type Hero_Form = Hero_Doc_Form;
 
 export type Hero_Document = Node & Document & {
   __typename?: 'Hero_Document';
@@ -146,15 +146,17 @@ export type Hero_Document = Node & Document & {
   form?: Maybe<Hero_Form>;
 };
 
-export type Main_Doc_Data = {
-  __typename?: 'Main_Doc_Data';
-  main?: Maybe<Scalars['String']>;
+export type Hero_Doc_Data = {
+  __typename?: 'Hero_Doc_Data';
+  hero?: Maybe<Scalars['String']>;
+  sub_hero?: Maybe<Scalars['String']>;
   _body?: Maybe<Scalars['String']>;
 };
 
-export type Main_Doc_Values = {
-  __typename?: 'Main_Doc_Values';
-  main?: Maybe<Scalars['String']>;
+export type Hero_Doc_Values = {
+  __typename?: 'Hero_Doc_Values';
+  hero?: Maybe<Scalars['String']>;
+  sub_hero?: Maybe<Scalars['String']>;
   _body?: Maybe<Scalars['String']>;
   _template?: Maybe<Scalars['String']>;
 };
@@ -173,17 +175,18 @@ export type TextareaField = FormField & {
   component?: Maybe<Scalars['String']>;
 };
 
-export type Main_Doc_FormFieldsUnion = TextField | TextareaField;
+export type Hero_Doc_FormFieldsUnion = TextField | TextareaField;
 
-export type Main_Doc_Form = {
-  __typename?: 'Main_Doc_Form';
+export type Hero_Doc_Form = {
+  __typename?: 'Hero_Doc_Form';
   label?: Maybe<Scalars['String']>;
   name?: Maybe<Scalars['String']>;
-  fields?: Maybe<Array<Maybe<Main_Doc_FormFieldsUnion>>>;
+  fields?: Maybe<Array<Maybe<Hero_Doc_FormFieldsUnion>>>;
 };
 
-export type Main_Doc_Input = {
-  main?: Maybe<Scalars['String']>;
+export type Hero_Doc_Input = {
+  hero?: Maybe<Scalars['String']>;
+  sub_hero?: Maybe<Scalars['String']>;
   _body?: Maybe<Scalars['String']>;
 };
 

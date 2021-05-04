@@ -67,15 +67,15 @@ type Query {
   getHeroList: [Hero_Document]
 }
 
-union Hero_Data = Main_Doc_Data
+union Hero_Data = Hero_Doc_Data
 
 input Hero_Input {
-  main: Main_Doc_Input
+  hero: Hero_Doc_Input
 }
 
-union Hero_Values = Main_Doc_Values
+union Hero_Values = Hero_Doc_Values
 
-union Hero_Form = Main_Doc_Form
+union Hero_Form = Hero_Doc_Form
 
 type Hero_Document implements Node & Document {
   id: ID!
@@ -85,13 +85,15 @@ type Hero_Document implements Node & Document {
   form: Hero_Form
 }
 
-type Main_Doc_Data {
-  main: String
+type Hero_Doc_Data {
+  hero: String
+  sub_hero: String
   _body: String
 }
 
-type Main_Doc_Values {
-  main: String
+type Hero_Doc_Values {
+  hero: String
+  sub_hero: String
   _body: String
   _template: String
 }
@@ -108,16 +110,17 @@ type TextareaField implements FormField {
   component: String
 }
 
-union Main_Doc_FormFieldsUnion = TextField | TextareaField
+union Hero_Doc_FormFieldsUnion = TextField | TextareaField
 
-type Main_Doc_Form {
+type Hero_Doc_Form {
   label: String
   name: String
-  fields: [Main_Doc_FormFieldsUnion]
+  fields: [Hero_Doc_FormFieldsUnion]
 }
 
-input Main_Doc_Input {
-  main: String
+input Hero_Doc_Input {
+  hero: String
+  sub_hero: String
   _body: String
 }
 
