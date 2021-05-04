@@ -1,13 +1,57 @@
+import { Date_Document, Hero_Document } from "../.tina/__generated__/types";
+
 import DateSection from "../components/DateSection";
 import EventDetails from "../components/EventDetails";
 import Gallery from "../components/Gallery";
 import Head from "next/head";
 import Hero from "../components/Hero";
+import { LocalClient } from "tina-graphql-gateway";
 import RSVP from "../components/RSVP";
 import Registry from "../components/Registry";
 import Timeline from "../components/Timeline";
 import WeddingParty from "../components/WeddingParty";
-const IndexPage = () => {
+
+export const getStaticProps = async () => {
+  const client = new LocalClient();
+  return {
+    props: await client.request(query, {
+      variables: {},
+    }),
+  };
+};
+
+export const query = (gql: any) => gql`
+  query PageQuery {
+    getHeroDocument(relativePath: "main.md") {
+      data {
+        __typename
+        ... on Hero_Doc_Data {
+          hero
+          sub_hero
+          _body
+        }
+      }
+    }
+    getDateDocument(relativePath: "main.md") {
+      data {
+        __typename
+        ... on Date_Doc_Data {
+          heading
+          sub_heading
+          date_text
+          _body
+        }
+      }
+    }
+  }
+`;
+
+export type PageQueryResponseType = {
+  getHeroDocument: Hero_Document;
+  getDateDocument: Date_Document;
+};
+
+const IndexPage = (props: PageQueryResponseType) => {
   return (
     <>
       <Head>
@@ -101,8 +145,8 @@ const IndexPage = () => {
           </div>
         </header>
 
-        <Hero />
-        <DateSection />
+        <Hero heroDoc={props.getHeroDocument} />
+        <DateSection dateDoc={props.getDateDocument} />
         <Timeline />
         <EventDetails />
         <Gallery />

@@ -1,0 +1,20 @@
+---
+sections:
+  - label: Hero Section
+    name: hero
+    path: content/hero
+    templates:
+      - hero
+    type: directory
+    create: documents
+    match: '**/*.md'
+    new_doc_ext: md
+  - label: Date Section
+    name: date
+    path: content/date
+    templates:
+      - date
+    type: directory
+    create: documents
+    match: '**/*.md'
+    new_doc_ext: md

@@ -2,9 +2,9 @@
   "name": "with-typescript",
   "version": "1.0.0",
   "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start",
+    "dev": "yarn tina-gql server:start -c \"next dev\"",
+    "build": "yarn tina-gql server:start -c \"next build\"",
+    "start": "yarn tina-gql server:start -c \"next start\"",
     "type-check": "tsc"
   },
   "dependencies": {
@@ -15,12 +15,16 @@
     "postcss-import": "^12.0.1",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
-    "tailwindcss": "^1.8.5"
+    "styled-components": "^5.2.3",
+    "tailwindcss": "^1.8.5",
+    "tina-graphql-gateway": "^0.2.8",
+    "tinacms": "^0.40.0"
   },
   "devDependencies": {
     "@types/node": "^12.12.21",
     "@types/react": "^16.9.16",
     "@types/react-dom": "^16.9.4",
+    "tina-graphql-gateway-cli": "^0.2.40",
     "typescript": "4.0"
   },
   "license": "MIT"

@@ -1,4 +1,10 @@
-const Hero = () => {
+import { Hero_Document } from "../.tina/__generated__/types";
+
+type HeroProps = {
+  heroDoc: Hero_Document;
+};
+
+const Hero = ({ heroDoc }: HeroProps) => {
   return (
     <section className="gradient-overlay gradient-overlay-dark ">
       <picture>
@@ -16,9 +22,9 @@ const Hero = () => {
       <div className="container">
         <div className="row min-vh-80 align-items-center z-index-2 position-relative text-center">
           <div className="col-12">
-            <h1 className="display-2  text-white mb-4">Kate &amp; Chris</h1>
+            <h1 className="display-2  text-white mb-4">{heroDoc.data?.hero}</h1>
             <p className="font-weight-300 text-light  lead mb-5 ">
-              Saturday August 28th, 2021 - Victoria, PEI
+              {heroDoc.data?.sub_hero}
             </p>
             <a
               href="#rsvp"

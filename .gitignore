@@ -32,3 +32,6 @@ yarn-error.log*
 
 # vercel
 .vercel
+
+# super secret things
+.env
