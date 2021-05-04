@@ -1,0 +1,7 @@
+---
+label: Main
+name: main
+fields:
+  - type: text
+    label: main
+    name: main
