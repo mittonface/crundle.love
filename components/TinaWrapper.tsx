@@ -1,8 +1,8 @@
+import { DateFieldPlugin } from "react-tinacms-date";
 import React from "react";
 import { TinaCMS } from "tinacms";
 import { TinaCloudAuthWall } from "tina-graphql-gateway";
 import { createClient } from "../utils";
-
 type TinaWrapperProps = {
   children: React.ReactNode;
 };
@@ -16,6 +16,7 @@ const TinaWrapper = ({ children }: TinaWrapperProps) => {
         placeholder: SidebarPlaceholder,
       },
       enabled: true,
+      plugins: [DateFieldPlugin],
     });
   }, []);
 
