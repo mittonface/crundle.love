@@ -64,10 +64,11 @@ export type Section = {
   documents?: Maybe<Array<Maybe<Document>>>;
 };
 
-export type SectionDocumentUnion = Hero_Document;
+export type SectionDocumentUnion = Hero_Document | Date_Document;
 
 export type SectionParams = {
   hero?: Maybe<Hero_Input>;
+  date?: Maybe<Date_Input>;
 };
 
 export type Mutation = {
@@ -75,6 +76,7 @@ export type Mutation = {
   addPendingDocument?: Maybe<Document>;
   updateDocument?: Maybe<SectionDocumentUnion>;
   updateHeroDocument?: Maybe<Hero_Document>;
+  updateDateDocument?: Maybe<Date_Document>;
 };
 
 
@@ -96,6 +98,12 @@ export type MutationUpdateHeroDocumentArgs = {
   params?: Maybe<Hero_Input>;
 };
 
+
+export type MutationUpdateDateDocumentArgs = {
+  relativePath?: Maybe<Scalars['String']>;
+  params?: Maybe<Date_Input>;
+};
+
 export type Query = {
   __typename?: 'Query';
   node?: Maybe<Node>;
@@ -104,6 +112,8 @@ export type Query = {
   getCollection?: Maybe<Section>;
   getHeroDocument?: Maybe<Hero_Document>;
   getHeroList?: Maybe<Array<Maybe<Hero_Document>>>;
+  getDateDocument?: Maybe<Date_Document>;
+  getDateList?: Maybe<Array<Maybe<Date_Document>>>;
 };
 
 
@@ -124,6 +134,11 @@ export type QueryGetCollectionArgs = {
 
 
 export type QueryGetHeroDocumentArgs = {
+  relativePath?: Maybe<Scalars['String']>;
+};
+
+
+export type QueryGetDateDocumentArgs = {
   relativePath?: Maybe<Scalars['String']>;
 };
 
@@ -187,6 +202,58 @@ export type Hero_Doc_Form = {
 export type Hero_Doc_Input = {
   hero?: Maybe<Scalars['String']>;
   sub_hero?: Maybe<Scalars['String']>;
+  _body?: Maybe<Scalars['String']>;
+};
+
+export type Date_Data = Date_Doc_Data;
+
+export type Date_Input = {
+  date?: Maybe<Date_Doc_Input>;
+};
+
+export type Date_Values = Date_Doc_Values;
+
+export type Date_Form = Date_Doc_Form;
+
+export type Date_Document = Node & Document & {
+  __typename?: 'Date_Document';
+  id: Scalars['ID'];
+  sys?: Maybe<SystemInfo>;
+  data?: Maybe<Date_Data>;
+  values?: Maybe<Date_Values>;
+  form?: Maybe<Date_Form>;
+};
+
+export type Date_Doc_Data = {
+  __typename?: 'Date_Doc_Data';
+  heading?: Maybe<Scalars['String']>;
+  date_text?: Maybe<Scalars['String']>;
+  sub_heading?: Maybe<Scalars['String']>;
+  _body?: Maybe<Scalars['String']>;
+};
+
+export type Date_Doc_Values = {
+  __typename?: 'Date_Doc_Values';
+  heading?: Maybe<Scalars['String']>;
+  date_text?: Maybe<Scalars['String']>;
+  sub_heading?: Maybe<Scalars['String']>;
+  _body?: Maybe<Scalars['String']>;
+  _template?: Maybe<Scalars['String']>;
+};
+
+export type Date_Doc_FormFieldsUnion = TextField | TextareaField;
+
+export type Date_Doc_Form = {
+  __typename?: 'Date_Doc_Form';
+  label?: Maybe<Scalars['String']>;
+  name?: Maybe<Scalars['String']>;
+  fields?: Maybe<Array<Maybe<Date_Doc_FormFieldsUnion>>>;
+};
+
+export type Date_Doc_Input = {
+  heading?: Maybe<Scalars['String']>;
+  date_text?: Maybe<Scalars['String']>;
+  sub_heading?: Maybe<Scalars['String']>;
   _body?: Maybe<Scalars['String']>;
 };
 

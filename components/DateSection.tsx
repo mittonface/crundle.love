@@ -1,17 +1,21 @@
-const DateSection = () => {
+import { Date_Document } from "../.tina/__generated__/types";
+type DateSectionProps = {
+  dateDoc: Date_Document;
+};
+const DateSection = ({ dateDoc }: DateSectionProps) => {
   return (
     <section id="resto" className=" ">
       <div className="container spacer-double-lg">
         <div className="row justify-content-lg-between align-items-center">
           <div className="col-md-6 mb-5 mb-md-0">
             <div className="pr-md-4">
-              <h1 className="font-secondary display-4">Save the date</h1>
+              <h1 className="font-secondary display-4">
+                {dateDoc.data?.heading}
+              </h1>
               <p className="lead font-weight-300 text-dark-gray opacity-8">
-                Saturday August 28th, 2021 - Victoria, PEI
+                {dateDoc.data?.date_text}
               </p>
-              <p className="mb-4 pr-5">
-                Please come to our wedding, it would be very cool if you did.
-              </p>
+              <p className="mb-4 pr-5">{dateDoc.data?.sub_heading}</p>
 
               <div className="countdown row text-center"></div>
             </div>

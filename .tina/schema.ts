@@ -25,5 +25,34 @@ export default defineSchema({
         },
       ],
     },
+
+    {
+      label: "Date Section",
+      name: "date",
+      path: "content/date",
+      templates: [
+        {
+          label: "Date Section",
+          name: "date",
+          fields: [
+            {
+              type: "text",
+              label: "Heading",
+              name: "heading",
+            },
+            {
+              type: "text",
+              label: "Date Text",
+              name: "date_text",
+            },
+            {
+              type: "text",
+              label: "Sub Heading",
+              name: "sub_heading",
+            },
+          ],
+        },
+      ],
+    },
   ],
 });

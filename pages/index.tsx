@@ -1,9 +1,10 @@
+import { Date_Document, Hero_Document } from "../.tina/__generated__/types";
+
 import DateSection from "../components/DateSection";
 import EventDetails from "../components/EventDetails";
 import Gallery from "../components/Gallery";
 import Head from "next/head";
 import Hero from "../components/Hero";
-import { Hero_Document } from "../.tina/__generated__/types";
 import { LocalClient } from "tina-graphql-gateway";
 import RSVP from "../components/RSVP";
 import Registry from "../components/Registry";
@@ -31,11 +32,23 @@ export const query = (gql: any) => gql`
         }
       }
     }
+    getDateDocument(relativePath: "main.md") {
+      data {
+        __typename
+        ... on Date_Doc_Data {
+          heading
+          sub_heading
+          date_text
+          _body
+        }
+      }
+    }
   }
 `;
 
 export type PageQueryResponseType = {
   getHeroDocument: Hero_Document;
+  getDateDocument: Date_Document;
 };
 
 const IndexPage = (props: PageQueryResponseType) => {
@@ -133,7 +146,7 @@ const IndexPage = (props: PageQueryResponseType) => {
         </header>
 
         <Hero heroDoc={props.getHeroDocument} />
-        <DateSection />
+        <DateSection dateDoc={props.getDateDocument} />
         <Timeline />
         <EventDetails />
         <Gallery />

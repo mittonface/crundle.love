@@ -46,16 +46,18 @@ type Section {
   documents: [Document]
 }
 
-union SectionDocumentUnion = Hero_Document
+union SectionDocumentUnion = Hero_Document | Date_Document
 
 input SectionParams {
   hero: Hero_Input
+  date: Date_Input
 }
 
 type Mutation {
   addPendingDocument(relativePath: String, collection: String, template: String): Document
   updateDocument(relativePath: String, params: SectionParams): SectionDocumentUnion
   updateHeroDocument(relativePath: String, params: Hero_Input): Hero_Document
+  updateDateDocument(relativePath: String, params: Date_Input): Date_Document
 }
 
 type Query {
@@ -65,6 +67,8 @@ type Query {
   getCollection(collection: String): Section
   getHeroDocument(relativePath: String): Hero_Document
   getHeroList: [Hero_Document]
+  getDateDocument(relativePath: String): Date_Document
+  getDateList: [Date_Document]
 }
 
 union Hero_Data = Hero_Doc_Data
@@ -121,6 +125,54 @@ type Hero_Doc_Form {
 input Hero_Doc_Input {
   hero: String
   sub_hero: String
+  _body: String
+}
+
+union Date_Data = Date_Doc_Data
+
+input Date_Input {
+  date: Date_Doc_Input
+}
+
+union Date_Values = Date_Doc_Values
+
+union Date_Form = Date_Doc_Form
+
+type Date_Document implements Node & Document {
+  id: ID!
+  sys: SystemInfo
+  data: Date_Data
+  values: Date_Values
+  form: Date_Form
+}
+
+type Date_Doc_Data {
+  heading: String
+  date_text: String
+  sub_heading: String
+  _body: String
+}
+
+type Date_Doc_Values {
+  heading: String
+  date_text: String
+  sub_heading: String
+  _body: String
+  _template: String
+}
+
+union Date_Doc_FormFieldsUnion = TextField | TextareaField
+
+type Date_Doc_Form {
+  label: String
+  name: String
+  fields: [Date_Doc_FormFieldsUnion]
+}
+
+input Date_Doc_Input {
+  heading: String
+  date_text: String
+  sub_heading: String
   _body: String
 }
 
