@@ -11,7 +11,7 @@ import { useRouter } from "next/router";
 const TinaWrapper = dynamic(() => import("../components/TinaWrapper"));
 
 const App = ({ Component, pageProps }: AppProps): any => {
-  const { route, asPath } = useRouter();
+  const { route } = useRouter();
 
   if (route.startsWith("/admin")) {
     return (
