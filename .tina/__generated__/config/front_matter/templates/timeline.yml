@@ -1,0 +1,14 @@
+---
+label: Timeline Section
+name: timeline
+fields:
+  - type: field_group_list
+    name: timeline
+    label: Timeline
+    fields:
+      - type: text
+        name: description
+        label: Description
+      - type: datetime
+        name: date
+        label: Date

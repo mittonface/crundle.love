@@ -64,11 +64,12 @@ export type Section = {
   documents?: Maybe<Array<Maybe<Document>>>;
 };
 
-export type SectionDocumentUnion = Hero_Document | Date_Document;
+export type SectionDocumentUnion = Hero_Document | Date_Document | Timeline_Document;
 
 export type SectionParams = {
   hero?: Maybe<Hero_Input>;
   date?: Maybe<Date_Input>;
+  timeline?: Maybe<Timeline_Input>;
 };
 
 export type Mutation = {
@@ -77,6 +78,7 @@ export type Mutation = {
   updateDocument?: Maybe<SectionDocumentUnion>;
   updateHeroDocument?: Maybe<Hero_Document>;
   updateDateDocument?: Maybe<Date_Document>;
+  updateTimelineDocument?: Maybe<Timeline_Document>;
 };
 
 
@@ -104,6 +106,12 @@ export type MutationUpdateDateDocumentArgs = {
   params?: Maybe<Date_Input>;
 };
 
+
+export type MutationUpdateTimelineDocumentArgs = {
+  relativePath?: Maybe<Scalars['String']>;
+  params?: Maybe<Timeline_Input>;
+};
+
 export type Query = {
   __typename?: 'Query';
   node?: Maybe<Node>;
@@ -114,6 +122,8 @@ export type Query = {
   getHeroList?: Maybe<Array<Maybe<Hero_Document>>>;
   getDateDocument?: Maybe<Date_Document>;
   getDateList?: Maybe<Array<Maybe<Date_Document>>>;
+  getTimelineDocument?: Maybe<Timeline_Document>;
+  getTimelineList?: Maybe<Array<Maybe<Timeline_Document>>>;
 };
 
 
@@ -139,6 +149,11 @@ export type QueryGetHeroDocumentArgs = {
 
 
 export type QueryGetDateDocumentArgs = {
+  relativePath?: Maybe<Scalars['String']>;
+};
+
+
+export type QueryGetTimelineDocumentArgs = {
   relativePath?: Maybe<Scalars['String']>;
 };
 
@@ -254,6 +269,88 @@ export type Date_Doc_Input = {
   heading?: Maybe<Scalars['String']>;
   date_text?: Maybe<Scalars['String']>;
   sub_heading?: Maybe<Scalars['String']>;
+  _body?: Maybe<Scalars['String']>;
+};
+
+export type Timeline_Data = Timeline_Doc_Data;
+
+export type Timeline_Input = {
+  timeline?: Maybe<Timeline_Doc_Input>;
+};
+
+export type Timeline_Values = Timeline_Doc_Values;
+
+export type Timeline_Form = Timeline_Doc_Form;
+
+export type Timeline_Document = Node & Document & {
+  __typename?: 'Timeline_Document';
+  id: Scalars['ID'];
+  sys?: Maybe<SystemInfo>;
+  data?: Maybe<Timeline_Data>;
+  values?: Maybe<Timeline_Values>;
+  form?: Maybe<Timeline_Form>;
+};
+
+export type Timeline_Timeline_Data = {
+  __typename?: 'Timeline_Timeline_Data';
+  description?: Maybe<Scalars['String']>;
+  date?: Maybe<Scalars['String']>;
+};
+
+export type Timeline_Doc_Data = {
+  __typename?: 'Timeline_Doc_Data';
+  timeline?: Maybe<Array<Maybe<Timeline_Timeline_Data>>>;
+  _body?: Maybe<Scalars['String']>;
+};
+
+export type Timeline_Timeline_Values = {
+  __typename?: 'Timeline_Timeline_Values';
+  description?: Maybe<Scalars['String']>;
+  date?: Maybe<Scalars['String']>;
+};
+
+export type Timeline_Doc_Values = {
+  __typename?: 'Timeline_Doc_Values';
+  timeline?: Maybe<Array<Maybe<Timeline_Timeline_Values>>>;
+  _body?: Maybe<Scalars['String']>;
+  _template?: Maybe<Scalars['String']>;
+};
+
+export type DatetimeField = FormField & {
+  __typename?: 'DatetimeField';
+  name?: Maybe<Scalars['String']>;
+  label?: Maybe<Scalars['String']>;
+  component?: Maybe<Scalars['String']>;
+  dateFormat?: Maybe<Scalars['String']>;
+  timeFormat?: Maybe<Scalars['String']>;
+};
+
+export type Timeline_Timeline_FormFieldsUnion = TextField | DatetimeField;
+
+export type Timeline_Timeline_GroupListField = FormField & {
+  __typename?: 'Timeline_Timeline_GroupListField';
+  name?: Maybe<Scalars['String']>;
+  label?: Maybe<Scalars['String']>;
+  component?: Maybe<Scalars['String']>;
+  fields?: Maybe<Array<Maybe<Timeline_Timeline_FormFieldsUnion>>>;
+};
+
+export type Timeline_Doc_FormFieldsUnion = Timeline_Timeline_GroupListField | TextareaField;
+
+export type Timeline_Doc_Form = {
+  __typename?: 'Timeline_Doc_Form';
+  label?: Maybe<Scalars['String']>;
+  name?: Maybe<Scalars['String']>;
+  fields?: Maybe<Array<Maybe<Timeline_Doc_FormFieldsUnion>>>;
+};
+
+export type Timeline_Timeline_Input = {
+  description?: Maybe<Scalars['String']>;
+  date?: Maybe<Scalars['String']>;
+};
+
+export type Timeline_Doc_Input = {
+  timeline?: Maybe<Array<Maybe<Timeline_Timeline_Input>>>;
   _body?: Maybe<Scalars['String']>;
 };
 

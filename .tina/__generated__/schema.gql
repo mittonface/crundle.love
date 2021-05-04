@@ -46,11 +46,12 @@ type Section {
   documents: [Document]
 }
 
-union SectionDocumentUnion = Hero_Document | Date_Document
+union SectionDocumentUnion = Hero_Document | Date_Document | Timeline_Document
 
 input SectionParams {
   hero: Hero_Input
   date: Date_Input
+  timeline: Timeline_Input
 }
 
 type Mutation {
@@ -58,6 +59,7 @@ type Mutation {
   updateDocument(relativePath: String, params: SectionParams): SectionDocumentUnion
   updateHeroDocument(relativePath: String, params: Hero_Input): Hero_Document
   updateDateDocument(relativePath: String, params: Date_Input): Date_Document
+  updateTimelineDocument(relativePath: String, params: Timeline_Input): Timeline_Document
 }
 
 type Query {
@@ -69,6 +71,8 @@ type Query {
   getHeroList: [Hero_Document]
   getDateDocument(relativePath: String): Date_Document
   getDateList: [Date_Document]
+  getTimelineDocument(relativePath: String): Timeline_Document
+  getTimelineList: [Timeline_Document]
 }
 
 union Hero_Data = Hero_Doc_Data
@@ -173,6 +177,80 @@ input Date_Doc_Input {
   heading: String
   date_text: String
   sub_heading: String
+  _body: String
+}
+
+union Timeline_Data = Timeline_Doc_Data
+
+input Timeline_Input {
+  timeline: Timeline_Doc_Input
+}
+
+union Timeline_Values = Timeline_Doc_Values
+
+union Timeline_Form = Timeline_Doc_Form
+
+type Timeline_Document implements Node & Document {
+  id: ID!
+  sys: SystemInfo
+  data: Timeline_Data
+  values: Timeline_Values
+  form: Timeline_Form
+}
+
+type Timeline_Timeline_Data {
+  description: String
+  date: String
+}
+
+type Timeline_Doc_Data {
+  timeline: [Timeline_Timeline_Data]
+  _body: String
+}
+
+type Timeline_Timeline_Values {
+  description: String
+  date: String
+}
+
+type Timeline_Doc_Values {
+  timeline: [Timeline_Timeline_Values]
+  _body: String
+  _template: String
+}
+
+type DatetimeField implements FormField {
+  name: String
+  label: String
+  component: String
+  dateFormat: String
+  timeFormat: String
+}
+
+union Timeline_Timeline_FormFieldsUnion = TextField | DatetimeField
+
+type Timeline_Timeline_GroupListField implements FormField {
+  name: String
+  label: String
+  component: String
+  fields: [Timeline_Timeline_FormFieldsUnion]
+}
+
+union Timeline_Doc_FormFieldsUnion = Timeline_Timeline_GroupListField | TextareaField
+
+type Timeline_Doc_Form {
+  label: String
+  name: String
+  fields: [Timeline_Doc_FormFieldsUnion]
+}
+
+input Timeline_Timeline_Input {
+  description: String
+  date: String
+}
+
+input Timeline_Doc_Input {
+  timeline: [Timeline_Timeline_Input]
   _body: String
 }
 

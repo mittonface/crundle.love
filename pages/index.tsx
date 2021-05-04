@@ -1,4 +1,9 @@
-import { Date_Document, Hero_Document } from "../.tina/__generated__/types";
+import {
+  Date_Document,
+  Hero_Document,
+  Timeline_Doc_Data,
+  Timeline_Document,
+} from "../.tina/__generated__/types";
 
 import DateSection from "../components/DateSection";
 import EventDetails from "../components/EventDetails";
@@ -43,15 +48,30 @@ export const query = (gql: any) => gql`
         }
       }
     }
+    getTimelineDocument(relativePath: "timeline.md") {
+      data {
+        __typename
+        ... on Timeline_Doc_Data {
+          timeline {
+            description
+            date
+          }
+        }
+      }
+    }
   }
 `;
 
 export type PageQueryResponseType = {
   getHeroDocument: Hero_Document;
   getDateDocument: Date_Document;
+  getTimelineDocument: Timeline_Document;
 };
 
 const IndexPage = (props: PageQueryResponseType) => {
+  console.log("hi?");
+  console.log(props.getDateDocument);
+  console.log(props.getTimelineDocument);
   return (
     <>
       <Head>
@@ -147,7 +167,7 @@ const IndexPage = (props: PageQueryResponseType) => {
 
         <Hero heroDoc={props.getHeroDocument} />
         <DateSection dateDoc={props.getDateDocument} />
-        <Timeline />
+        <Timeline timelineDoc={props.getTimelineDocument} />
         <EventDetails />
         <Gallery />
         <Registry />

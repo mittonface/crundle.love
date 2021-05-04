@@ -25,7 +25,6 @@ export default defineSchema({
         },
       ],
     },
-
     {
       label: "Date Section",
       name: "date",
@@ -49,6 +48,36 @@ export default defineSchema({
               type: "text",
               label: "Sub Heading",
               name: "sub_heading",
+            },
+          ],
+        },
+      ],
+    },
+    {
+      label: "Timeline Section",
+      name: "timeline",
+      path: "content/timeline",
+      templates: [
+        {
+          label: "Timeline Section",
+          name: "timeline",
+          fields: [
+            {
+              type: "group-list",
+              name: "timeline",
+              label: "Timeline",
+              fields: [
+                {
+                  type: "text",
+                  name: "description",
+                  label: "Description",
+                },
+                {
+                  type: "datetime",
+                  name: "date",
+                  label: "Date",
+                },
+              ],
             },
           ],
         },
