@@ -1,0 +1,23 @@
+---
+label: Wedding Events
+name: weddingEvents
+fields:
+  - type: field_group_list
+    name: weddingEvents
+    label: Events
+    fields:
+      - type: text
+        name: name
+        label: Event Name
+      - type: text
+        name: time
+        label: Event Time
+      - name: colorScheme
+        label: Color Scheme
+        type: select
+        config:
+          source:
+            type: simple
+          options:
+            - primary
+            - secondary

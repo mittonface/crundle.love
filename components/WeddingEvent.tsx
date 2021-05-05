@@ -1,30 +1,31 @@
+import {
+  Maybe,
+  WeddingEvents_WeddingEvents_Data,
+} from "../.tina/__generated__/types";
+
 type WeddingEventProps = {
-  name: string;
-  time: string;
-  description: string;
-  color: "primary" | "secondary";
+  eventItem: Maybe<WeddingEvents_WeddingEvents_Data>;
 };
-export const WeddingEvent = ({
-  name,
-  time,
-  description,
-  color,
-}: WeddingEventProps) => {
-  const iconFillColor = color === "primary" ? "#FFFFFF" : "#636784";
-  const textClass = color === "primary" ? " text-white" : "";
+
+export const WeddingEvent = ({ eventItem }: WeddingEventProps) => {
+  const iconFillColor =
+    eventItem?.colorScheme === "primary" ? "#FFFFFF" : "#636784";
+  const textClass = eventItem?.colorScheme === "primary" ? " text-white" : "";
 
   return (
     <div className="col-md-6 col-lg-4 d-flex ">
       <div
         className={
           `card card-body justify-content-between ` +
-          (color === "primary" ? " bg-primary text-light" : "")
+          (eventItem?.colorScheme === "primary" ? " bg-primary text-light" : "")
         }
       >
         <div
           className={
             `icon-round mb-3 mb-md-5` +
-            (color === "primary" ? " bg-icon-white" : " bg-icon-primary")
+            (eventItem?.colorScheme === "primary"
+              ? " bg-icon-white"
+              : " bg-icon-primary")
           }
         >
           <svg
@@ -137,9 +138,9 @@ export const WeddingEvent = ({
             />
           </svg>
         </div>
-        <h5 className={`mb-0` + textClass}>{name}</h5>
-        <h6 className={`mb-5` + textClass}>{time}</h6>
-        <p className="text-align-center">{description}</p>
+        <h5 className={`mb-0` + textClass}>{eventItem?.name}</h5>
+        <h6 className={`mb-5` + textClass}>{eventItem?.time}</h6>
+        <p className="text-align-center">{"todo"}</p>
       </div>
     </div>
   );

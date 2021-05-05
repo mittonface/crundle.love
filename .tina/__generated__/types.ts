@@ -64,12 +64,13 @@ export type Section = {
   documents?: Maybe<Array<Maybe<Document>>>;
 };
 
-export type SectionDocumentUnion = Hero_Document | Date_Document | Timeline_Document;
+export type SectionDocumentUnion = Hero_Document | Date_Document | Timeline_Document | WeddingEvents_Document;
 
 export type SectionParams = {
   hero?: Maybe<Hero_Input>;
   date?: Maybe<Date_Input>;
   timeline?: Maybe<Timeline_Input>;
+  weddingEvents?: Maybe<WeddingEvents_Input>;
 };
 
 export type Mutation = {
@@ -79,6 +80,7 @@ export type Mutation = {
   updateHeroDocument?: Maybe<Hero_Document>;
   updateDateDocument?: Maybe<Date_Document>;
   updateTimelineDocument?: Maybe<Timeline_Document>;
+  updateWeddingEventsDocument?: Maybe<WeddingEvents_Document>;
 };
 
 
@@ -112,6 +114,12 @@ export type MutationUpdateTimelineDocumentArgs = {
   params?: Maybe<Timeline_Input>;
 };
 
+
+export type MutationUpdateWeddingEventsDocumentArgs = {
+  relativePath?: Maybe<Scalars['String']>;
+  params?: Maybe<WeddingEvents_Input>;
+};
+
 export type Query = {
   __typename?: 'Query';
   node?: Maybe<Node>;
@@ -124,6 +132,8 @@ export type Query = {
   getDateList?: Maybe<Array<Maybe<Date_Document>>>;
   getTimelineDocument?: Maybe<Timeline_Document>;
   getTimelineList?: Maybe<Array<Maybe<Timeline_Document>>>;
+  getWeddingEventsDocument?: Maybe<WeddingEvents_Document>;
+  getWeddingEventsList?: Maybe<Array<Maybe<WeddingEvents_Document>>>;
 };
 
 
@@ -154,6 +164,11 @@ export type QueryGetDateDocumentArgs = {
 
 
 export type QueryGetTimelineDocumentArgs = {
+  relativePath?: Maybe<Scalars['String']>;
+};
+
+
+export type QueryGetWeddingEventsDocumentArgs = {
   relativePath?: Maybe<Scalars['String']>;
 };
 
@@ -351,6 +366,90 @@ export type Timeline_Timeline_Input = {
 
 export type Timeline_Doc_Input = {
   timeline?: Maybe<Array<Maybe<Timeline_Timeline_Input>>>;
+  _body?: Maybe<Scalars['String']>;
+};
+
+export type WeddingEvents_Data = WeddingEvents_Doc_Data;
+
+export type WeddingEvents_Input = {
+  weddingEvents?: Maybe<WeddingEvents_Doc_Input>;
+};
+
+export type WeddingEvents_Values = WeddingEvents_Doc_Values;
+
+export type WeddingEvents_Form = WeddingEvents_Doc_Form;
+
+export type WeddingEvents_Document = Node & Document & {
+  __typename?: 'WeddingEvents_Document';
+  id: Scalars['ID'];
+  sys?: Maybe<SystemInfo>;
+  data?: Maybe<WeddingEvents_Data>;
+  values?: Maybe<WeddingEvents_Values>;
+  form?: Maybe<WeddingEvents_Form>;
+};
+
+export type WeddingEvents_WeddingEvents_Data = {
+  __typename?: 'WeddingEvents_WeddingEvents_Data';
+  name?: Maybe<Scalars['String']>;
+  time?: Maybe<Scalars['String']>;
+  colorScheme?: Maybe<Scalars['String']>;
+};
+
+export type WeddingEvents_Doc_Data = {
+  __typename?: 'WeddingEvents_Doc_Data';
+  weddingEvents?: Maybe<Array<Maybe<WeddingEvents_WeddingEvents_Data>>>;
+  _body?: Maybe<Scalars['String']>;
+};
+
+export type WeddingEvents_WeddingEvents_Values = {
+  __typename?: 'WeddingEvents_WeddingEvents_Values';
+  name?: Maybe<Scalars['String']>;
+  time?: Maybe<Scalars['String']>;
+  colorScheme?: Maybe<Scalars['Reference']>;
+};
+
+export type WeddingEvents_Doc_Values = {
+  __typename?: 'WeddingEvents_Doc_Values';
+  weddingEvents?: Maybe<Array<Maybe<WeddingEvents_WeddingEvents_Values>>>;
+  _body?: Maybe<Scalars['String']>;
+  _template?: Maybe<Scalars['String']>;
+};
+
+export type SelectField = FormField & {
+  __typename?: 'SelectField';
+  name?: Maybe<Scalars['String']>;
+  label?: Maybe<Scalars['String']>;
+  component?: Maybe<Scalars['String']>;
+  options?: Maybe<Array<Maybe<Scalars['String']>>>;
+};
+
+export type WeddingEvents_WeddingEvents_FormFieldsUnion = TextField | SelectField;
+
+export type WeddingEvents_WeddingEvents_GroupListField = FormField & {
+  __typename?: 'WeddingEvents_WeddingEvents_GroupListField';
+  name?: Maybe<Scalars['String']>;
+  label?: Maybe<Scalars['String']>;
+  component?: Maybe<Scalars['String']>;
+  fields?: Maybe<Array<Maybe<WeddingEvents_WeddingEvents_FormFieldsUnion>>>;
+};
+
+export type WeddingEvents_Doc_FormFieldsUnion = WeddingEvents_WeddingEvents_GroupListField | TextareaField;
+
+export type WeddingEvents_Doc_Form = {
+  __typename?: 'WeddingEvents_Doc_Form';
+  label?: Maybe<Scalars['String']>;
+  name?: Maybe<Scalars['String']>;
+  fields?: Maybe<Array<Maybe<WeddingEvents_Doc_FormFieldsUnion>>>;
+};
+
+export type WeddingEvents_WeddingEvents_Input = {
+  name?: Maybe<Scalars['String']>;
+  time?: Maybe<Scalars['String']>;
+  colorScheme?: Maybe<Scalars['String']>;
+};
+
+export type WeddingEvents_Doc_Input = {
+  weddingEvents?: Maybe<Array<Maybe<WeddingEvents_WeddingEvents_Input>>>;
   _body?: Maybe<Scalars['String']>;
 };
 

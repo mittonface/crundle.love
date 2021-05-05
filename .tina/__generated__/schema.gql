@@ -46,12 +46,13 @@ type Section {
   documents: [Document]
 }
 
-union SectionDocumentUnion = Hero_Document | Date_Document | Timeline_Document
+union SectionDocumentUnion = Hero_Document | Date_Document | Timeline_Document | WeddingEvents_Document
 
 input SectionParams {
   hero: Hero_Input
   date: Date_Input
   timeline: Timeline_Input
+  weddingEvents: WeddingEvents_Input
 }
 
 type Mutation {
@@ -60,6 +61,7 @@ type Mutation {
   updateHeroDocument(relativePath: String, params: Hero_Input): Hero_Document
   updateDateDocument(relativePath: String, params: Date_Input): Date_Document
   updateTimelineDocument(relativePath: String, params: Timeline_Input): Timeline_Document
+  updateWeddingEventsDocument(relativePath: String, params: WeddingEvents_Input): WeddingEvents_Document
 }
 
 type Query {
@@ -73,6 +75,8 @@ type Query {
   getDateList: [Date_Document]
   getTimelineDocument(relativePath: String): Timeline_Document
   getTimelineList: [Timeline_Document]
+  getWeddingEventsDocument(relativePath: String): WeddingEvents_Document
+  getWeddingEventsList: [WeddingEvents_Document]
 }
 
 union Hero_Data = Hero_Doc_Data
@@ -251,6 +255,82 @@ input Timeline_Timeline_Input {
 
 input Timeline_Doc_Input {
   timeline: [Timeline_Timeline_Input]
+  _body: String
+}
+
+union WeddingEvents_Data = WeddingEvents_Doc_Data
+
+input WeddingEvents_Input {
+  weddingEvents: WeddingEvents_Doc_Input
+}
+
+union WeddingEvents_Values = WeddingEvents_Doc_Values
+
+union WeddingEvents_Form = WeddingEvents_Doc_Form
+
+type WeddingEvents_Document implements Node & Document {
+  id: ID!
+  sys: SystemInfo
+  data: WeddingEvents_Data
+  values: WeddingEvents_Values
+  form: WeddingEvents_Form
+}
+
+type WeddingEvents_WeddingEvents_Data {
+  name: String
+  time: String
+  colorScheme: String
+}
+
+type WeddingEvents_Doc_Data {
+  weddingEvents: [WeddingEvents_WeddingEvents_Data]
+  _body: String
+}
+
+type WeddingEvents_WeddingEvents_Values {
+  name: String
+  time: String
+  colorScheme: Reference
+}
+
+type WeddingEvents_Doc_Values {
+  weddingEvents: [WeddingEvents_WeddingEvents_Values]
+  _body: String
+  _template: String
+}
+
+type SelectField implements FormField {
+  name: String
+  label: String
+  component: String
+  options: [String]
+}
+
+union WeddingEvents_WeddingEvents_FormFieldsUnion = TextField | SelectField
+
+type WeddingEvents_WeddingEvents_GroupListField implements FormField {
+  name: String
+  label: String
+  component: String
+  fields: [WeddingEvents_WeddingEvents_FormFieldsUnion]
+}
+
+union WeddingEvents_Doc_FormFieldsUnion = WeddingEvents_WeddingEvents_GroupListField | TextareaField
+
+type WeddingEvents_Doc_Form {
+  label: String
+  name: String
+  fields: [WeddingEvents_Doc_FormFieldsUnion]
+}
+
+input WeddingEvents_WeddingEvents_Input {
+  name: String
+  time: String
+  colorScheme: String
+}
+
+input WeddingEvents_Doc_Input {
+  weddingEvents: [WeddingEvents_WeddingEvents_Input]
   _body: String
 }
 

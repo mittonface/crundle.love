@@ -1,5 +1,9 @@
 import { WeddingEvent } from "./WeddingEvent";
-const EventDetails = () => {
+import { WeddingEvents_Document } from "../.tina/__generated__/types";
+type EventDetailsProps = {
+  eventsDoc: WeddingEvents_Document;
+};
+const EventDetails = ({ eventsDoc }: EventDetailsProps) => {
   return (
     <section id="wedding" className="spacer-one-top-lg">
       <div className="container spacer-one-bottom-lg">
@@ -12,24 +16,9 @@ const EventDetails = () => {
           </div>
         </div>
         <div className="row">
-          <WeddingEvent
-            name="Ceremony"
-            time="6:30am - 6:31am"
-            description="I need to make this be able to include line breaks."
-            color="primary"
-          />
-          <WeddingEvent
-            name="Reception"
-            time="6:30am - 6:31am"
-            description="I need to make this be able to include line breaks"
-            color="secondary"
-          />
-          <WeddingEvent
-            name="Another Event"
-            time="6:30am - 6:31am"
-            description="I need to make this be able to include line breaks"
-            color="primary"
-          />
+          {eventsDoc.data?.weddingEvents?.map((weddingEvent) => (
+            <WeddingEvent eventItem={weddingEvent} />
+          ))}
         </div>
         <div className="row">
           <div className="col">

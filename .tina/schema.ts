@@ -83,5 +83,41 @@ export default defineSchema({
         },
       ],
     },
+    {
+      label: "Wedding Events",
+      name: "weddingEvents",
+      path: "content/events",
+      templates: [
+        {
+          label: "Wedding Events",
+          name: "weddingEvents",
+          fields: [
+            {
+              type: "group-list",
+              name: "weddingEvents",
+              label: "Events",
+              fields: [
+                {
+                  type: "text",
+                  name: "name",
+                  label: "Event Name",
+                },
+                {
+                  type: "text",
+                  name: "time",
+                  label: "Event Time",
+                },
+                {
+                  type: "select",
+                  name: "colorScheme",
+                  label: "Color Scheme",
+                  options: ["primary", "secondary"],
+                },
+              ],
+            },
+          ],
+        },
+      ],
+    },
   ],
 });

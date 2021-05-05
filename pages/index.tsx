@@ -2,6 +2,7 @@ import {
   Date_Document,
   Hero_Document,
   Timeline_Document,
+  WeddingEvents_Document,
 } from "../.tina/__generated__/types";
 
 import DateSection from "../components/DateSection";
@@ -58,6 +59,18 @@ export const query = (gql: any) => gql`
         }
       }
     }
+    getWeddingEventsDocument(relativePath: "events.md") {
+      data {
+        __typename
+        ... on WeddingEvents_Doc_Data {
+          weddingEvents {
+            name
+            time
+            colorScheme
+          }
+        }
+      }
+    }
   }
 `;
 
@@ -65,6 +78,7 @@ export type PageQueryResponseType = {
   getHeroDocument: Hero_Document;
   getDateDocument: Date_Document;
   getTimelineDocument: Timeline_Document;
+  getWeddingEventsDocument: WeddingEvents_Document;
 };
 
 const IndexPage = (props: PageQueryResponseType) => {
@@ -164,7 +178,7 @@ const IndexPage = (props: PageQueryResponseType) => {
         <Hero heroDoc={props.getHeroDocument} />
         <DateSection dateDoc={props.getDateDocument} />
         <Timeline timelineDoc={props.getTimelineDocument} />
-        <EventDetails />
+        <EventDetails eventsDoc={props.getWeddingEventsDocument} />
         <Gallery />
         <Registry />
         <WeddingParty />
