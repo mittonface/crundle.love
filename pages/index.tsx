@@ -27,7 +27,7 @@ export const getStaticProps = async () => {
 
 export const query = (gql: any) => gql`
   query PageQuery {
-    getHeroDocument(relativePath: "main.md") {
+    getHeroDocument(relativePath: "hero.md") {
       data {
         __typename
         ... on Hero_Doc_Data {
@@ -37,7 +37,7 @@ export const query = (gql: any) => gql`
         }
       }
     }
-    getDateDocument(relativePath: "main.md") {
+    getDateDocument(relativePath: "date.md") {
       data {
         __typename
         ... on Date_Doc_Data {
