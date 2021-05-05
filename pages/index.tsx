@@ -109,12 +109,6 @@ const IndexPage = (props: PageQueryResponseType) => {
               <nav className="navbar navbar-expand-lg header-navbar ml-0 ml-lg-5">
                 <a className=" navbar-brand navbar-logo scroll" href="#wrapper">
                   <img
-                    className="mb-0 logo-light"
-                    src="assets/svg/logo-light.svg"
-                    style={{ height: "35px", width: "187px" }}
-                    alt=""
-                  />
-                  <img
                     className="mb-0 logo-dark"
                     src="assets/svg/logo-dark.svg"
                     style={{ height: "35px", width: "187px" }}
