@@ -49,8 +49,8 @@ export class NextS3MediaStore implements MediaStore {
   async persist(files: MediaUploadOptions[]): Promise<Media[]> {
     const uploaded: Media[] = [];
 
+    const token = await this.getS3StsToken();
     for (const { directory, file } of files) {
-      const token = await this.getS3StsToken();
       const uploadResult: S3UploadObject = await uploadToS3(
         token,
         this.s3Bucket,
@@ -177,9 +177,11 @@ const uploadToS3 = async (
   const s3 = getS3(token);
 
   const blob = await getFileContents(file);
-  const key =
+  let key =
     `${directory.replace(/^\//, "").replace(/\/$/, "")}/` +
-    `${filename.replace(/\s/g, "-")}`;
+    `${filename.replace(/\s/g, "-")}`.replace(/\//g, "");
+
+  key = key.replace(/^\/|\/$/g, "");
 
   const params: S3.Types.PutObjectRequest = {
     ACL: "public-read",
@@ -198,8 +200,6 @@ const uploadToS3 = async (
   const s3Upload = s3.upload(params);
 
   const der = await s3Upload.promise();
-  console.log(der);
-  console.log(s3Upload);
   return der;
 };
 
@@ -220,9 +220,7 @@ const deleteFromS3 = async (
 };
 
 const getNewS3StsToken = async (): Promise<StsTokenAndCreatedAt> => {
-  console.log("calling the s3-sts-token api");
   const res = await fetch(`/api/s3-sts-token`);
-  console.log(res);
   const data = await res.json();
 
   if (data.error) {
@@ -254,6 +252,7 @@ const getS3 = (token: STS.Types.GetFederationTokenResponse) => {
     accessKeyId: token.Credentials.AccessKeyId,
     secretAccessKey: token.Credentials.SecretAccessKey,
     sessionToken: token.Credentials.SessionToken,
+    signatureVersion: "v2",
   });
 };
 

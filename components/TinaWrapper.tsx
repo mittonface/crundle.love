@@ -21,6 +21,7 @@ const TinaWrapper = ({ children }: TinaWrapperProps) => {
       plugins: [DateFieldPlugin],
       media: new NextS3MediaStore({
         s3Bucket: "crundlelove",
+        s3ServerSideEncryption: "AES256",
       }),
     });
   }, []);
