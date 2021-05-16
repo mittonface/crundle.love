@@ -1,8 +1,10 @@
 import { DateFieldPlugin } from "react-tinacms-date";
+import { NextS3MediaStore } from "../src/s3-media-store";
 import React from "react";
 import { TinaCMS } from "tinacms";
 import { TinaCloudAuthWall } from "tina-graphql-gateway";
 import { createClient } from "../utils";
+
 type TinaWrapperProps = {
   children: React.ReactNode;
 };
@@ -17,6 +19,9 @@ const TinaWrapper = ({ children }: TinaWrapperProps) => {
       },
       enabled: true,
       plugins: [DateFieldPlugin],
+      media: new NextS3MediaStore({
+        s3Bucket: "crundlelove",
+      }),
     });
   }, []);
 

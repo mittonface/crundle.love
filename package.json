@@ -11,6 +11,7 @@
     "@fullhuman/postcss-purgecss": "^2.3.0",
     "@tailwindcss/ui": "^0.6.0",
     "animate.css": "^4.1.1",
+    "aws-sdk": "^2.907.0",
     "moment": "^2.29.1",
     "next": "10.0.0",
     "postcss-import": "^12.0.1",
