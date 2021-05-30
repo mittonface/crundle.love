@@ -11,9 +11,7 @@ import Gallery from "../components/Gallery";
 import Head from "next/head";
 import Hero from "../components/Hero";
 import { LocalClient } from "tina-graphql-gateway";
-import RSVP from "../components/RSVP";
 import Registry from "../components/Registry";
-import Timeline from "../components/Timeline";
 import WeddingParty from "../components/WeddingParty";
 
 export const getStaticProps = async () => {
@@ -132,11 +130,7 @@ const IndexPage = (props: PageQueryResponseType) => {
                         Date
                       </a>
                     </li>
-                    <li>
-                      <a className=" nav-link scroll" href="#story">
-                        Love Story
-                      </a>
-                    </li>
+                    <li></li>
                     <li>
                       <a className=" nav-link scroll" href="#wedding">
                         Wedding
@@ -157,11 +151,6 @@ const IndexPage = (props: PageQueryResponseType) => {
                         Wedding Party
                       </a>
                     </li>
-                    <li>
-                      <a className=" nav-link scroll" href="#rsvp">
-                        Rsvp
-                      </a>
-                    </li>
                   </ul>
                 </div>
               </nav>
@@ -171,12 +160,10 @@ const IndexPage = (props: PageQueryResponseType) => {
 
         <Hero heroDoc={props.getHeroDocument} />
         <DateSection dateDoc={props.getDateDocument} />
-        <Timeline timelineDoc={props.getTimelineDocument} />
         <EventDetails eventsDoc={props.getWeddingEventsDocument} />
         <Gallery />
         <Registry />
         <WeddingParty />
-        <RSVP />
 
         <a className="scroll-to-top scroll" href="#wrapper">
           <svg

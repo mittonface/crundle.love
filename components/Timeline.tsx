@@ -6,7 +6,7 @@ type TimelineProps = {
 };
 const Timeline = ({ timelineDoc }: TimelineProps) => {
   return (
-    <section id="story" className=" bg-secondary spacer-one-top-lg">
+    <section id="story" className="bg-secondary spacer-one-top-lg">
       <div className="container spacer-one-bottom-lg">
         <div className="row justify-content-center">
           <div className="col">

@@ -5,7 +5,7 @@ type EventDetailsProps = {
 };
 const EventDetails = ({ eventsDoc }: EventDetailsProps) => {
   return (
-    <section id="wedding" className="spacer-one-top-lg">
+    <section id="wedding" className="bg-secondary spacer-one-top-lg">
       <div className="container spacer-one-bottom-lg">
         <div className="row justify-content-center">
           <div className="col">
@@ -20,24 +20,12 @@ const EventDetails = ({ eventsDoc }: EventDetailsProps) => {
             <WeddingEvent eventItem={weddingEvent} />
           ))}
         </div>
-        <div className="row">
-          <div className="col">
-            <div className=" text-center mt-5 pt-5">
-              <a
-                href="#rsvp"
-                className="btn btn-primary btn-wide-sm btn-sm  scroll"
-              >
-                RSVP
-              </a>
-            </div>
-          </div>
-        </div>
       </div>
-      <div className="curved-decoration">
+      <div className="curved-decoration ">
         <svg
           width="100%"
           height="100%"
-          className="bg-secondary-svg"
+          className="bg-white-svg"
           version="1.1"
           xmlBase="http://www.w3.org/2000/svg"
           xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -50,9 +38,9 @@ const EventDetails = ({ eventsDoc }: EventDetailsProps) => {
           <g></g>
           <g>
             <path
-              d="M0,0c0,0,219.6543,165.951,730.788,124.0771c383.3156-31.4028,827.2139-96.9514,1244.7139-96.9514
-    c212.5106,0,438.9999,3.5,584.4982,1.5844v139.9126H0V0z"
-            ></path>
+              d="M2560,0c0,0-219.6543,165.951-730.788,124.0771c-383.3156-31.4028-827.2138-96.9514-1244.7139-96.9514
+    c-212.5106,0-439,3.5-584.4982,1.5844l0,139.9126h2560V0z"
+            />
           </g>
         </svg>
       </div>

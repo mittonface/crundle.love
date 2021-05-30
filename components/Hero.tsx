@@ -26,12 +26,6 @@ const Hero = ({ heroDoc }: HeroProps) => {
             <p className="font-weight-300 text-light  lead mb-5 ">
               {heroDoc.data?.sub_hero}
             </p>
-            <a
-              href="#rsvp"
-              className="btn btn-primary btn-wide-sm btn-sm  scroll"
-            >
-              RSVP
-            </a>
           </div>
         </div>
       </div>

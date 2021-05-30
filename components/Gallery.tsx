@@ -1,7 +1,7 @@
 import Image from "next/image";
 const Gallery = () => {
   return (
-    <section id="gallery" className="bg-secondary ">
+    <section id="gallery" className="">
       <div className="container spacer-double-lg">
         <div className="col-lg-11 mx-lg-auto">
           <div className="row justify-content-center card-gutters">
