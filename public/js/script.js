@@ -55,7 +55,7 @@
   });
 
   $(".countdown")
-    .countdown("2021/8/28")
+    .countdown("2021/8/28 15:00:00 ")
     .on("update.countdown", function (event) {
       var $this = $(this).html(
         event.strftime(

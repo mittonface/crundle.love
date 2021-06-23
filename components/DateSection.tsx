@@ -15,7 +15,6 @@ const DateSection = ({ dateDoc }: DateSectionProps) => {
               <p className="lead font-weight-300 text-dark-gray opacity-8">
                 {dateDoc.data?.date_text}
               </p>
-              <p className="mb-4 pr-5">{dateDoc.data?.sub_heading}</p>
 
               <div className="countdown row text-center"></div>
             </div>
