@@ -14,8 +14,9 @@ const WeddingParty = () => {
             <div className="px-5 mb-4 pb-4 ">
               <div className=" mt-4">
                 <ul style={{ listStyle: "none" }}>
-                  <li>Emma Barlow</li>
                   <li>Amanda Bettle (Matron of Honour)</li>
+                  <li>Jessie Champion</li>
+
                   <li>Cierra Gaudet</li>
                   <li>Sara Reeves</li>
                 </ul>
