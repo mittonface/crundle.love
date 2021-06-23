@@ -143,7 +143,7 @@ const IndexPage = (props: PageQueryResponseType) => {
                     </li>
                     <li>
                       <a className=" nav-link scroll" href="#gift">
-                        Gift Registry
+                        Registry
                       </a>
                     </li>
                     <li>

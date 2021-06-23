@@ -4,12 +4,39 @@ const Registry = () => {
       <div className="container spacer-double-lg">
         <div className="row justify-content-between z-index-3 position-relative align-items-center">
           <div className="col-md-6 mb-3 mb-md-0">
-            <h1 className="display-4 text-white">Gift Registry</h1>
+            <h1 className="display-4 text-white">Registry</h1>
             <p className="lead text-white mb-0">
-              Get us a toaster. We really like to eat toast.
+              We're so lucky to already have a home full of everything we need,
+              but if you feel so inclined please contribute to one of our
+              charities of choice or our cash registry.
             </p>
           </div>
-          <div className="col-md-5">Links to registry here.</div>
+          <div className="flex justify-center w-full ">
+            <div className=" text-center px-4 py-2 m-6">
+              <a
+                href="https://www.hopeforwildlife.net/donations"
+                className="bg-white rounded p-4 text-black"
+              >
+                Hope For Wildlife
+              </a>
+            </div>
+            <div className=" text-center  px-4 py-2 m-6">
+              <a
+                href="https://secure-support.heartandstroke.ca/site/SPageServer?pagename=DMDonationForm&s_locale=en_CA&s_fT=cont&s_pres=hsweb&s_cscid=hsweb_nav&_ga=2.163056380.1964448144.1622383460-1127825277.1622383460"
+                className="bg-white rounded p-4 text-black"
+              >
+                Heart & Stroke Foundation
+              </a>
+            </div>
+            <div className=" text-center w-full py-2 m-6">
+              <a
+                href="https://www.honeyfund.com/wedding/rundle-cairns-08-28-2021"
+                className="bg-white rounded p-4 w-full text-black"
+              >
+                Honey Fund Registry
+              </a>
+            </div>
+          </div>
         </div>
       </div>
       <div className="curved-decoration z-index-3">
