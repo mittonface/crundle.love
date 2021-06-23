@@ -1,14 +1,11 @@
 ---
 weddingEvents:
     - name:  Ceremony
-      time: "4:20am - 6:90pm"
+      time: "3:00pm"
       colorScheme: "primary"
-    - name:  Ceremony
-      time: "4:20am - 6:90pm"
+    - name:  Cocktail Hour & Reception to Follow
+      time: ""
       colorScheme: "secondary"
-    - name:  Reception
-      time: "4:20am - 6:90pm"
-      colorScheme: "primary"
 _template: weddingEvents
 ---
 

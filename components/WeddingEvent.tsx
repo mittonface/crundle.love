@@ -140,7 +140,16 @@ export const WeddingEvent = ({ eventItem }: WeddingEventProps) => {
         </div>
         <h5 className={`mb-0` + textClass}>{eventItem?.name}</h5>
         <h6 className={`mb-5` + textClass}>{eventItem?.time}</h6>
-        <p className="text-align-center">{"todo"}</p>
+
+        {eventItem?.name === "Ceremony" && (
+          <>
+            <p className="text-align-center">
+              <strong>The Grand Victorian</strong>
+              <br />
+              106 Nelson St, Victoria, PE
+            </p>
+          </>
+        )}
       </div>
     </div>
   );

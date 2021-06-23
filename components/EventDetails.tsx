@@ -16,9 +16,9 @@ const EventDetails = ({ eventsDoc }: EventDetailsProps) => {
           </div>
         </div>
         <div className="row">
-          {eventsDoc.data?.weddingEvents?.map((weddingEvent) => (
-            <WeddingEvent eventItem={weddingEvent} />
-          ))}
+          <WeddingEvent eventItem={eventsDoc.data!.weddingEvents![0]} />
+          <div className="col-md-6 col-lg-4 d-flex "></div>
+          <WeddingEvent eventItem={eventsDoc.data!.weddingEvents![1]} />
         </div>
       </div>
       <div className="curved-decoration ">
