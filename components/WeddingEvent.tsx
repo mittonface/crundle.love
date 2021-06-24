@@ -169,6 +169,16 @@ export const WeddingEvent = ({ eventItem }: WeddingEventProps) => {
             </p>
           </>
         )}
+
+        {eventItem?.name !== "Ceremony" && (
+          <>
+            <p className="text-align-center">
+              <strong>At the same location</strong>
+              <br />
+              &nbsp;
+            </p>
+          </>
+        )}
       </div>
     </div>
   );
