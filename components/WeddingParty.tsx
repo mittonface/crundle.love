@@ -27,8 +27,8 @@ const WeddingParty = () => {
             <div className=" px-5 mb-4 pb-4 ">
               <div className=" mt-4">
                 <ul style={{ listStyle: "none" }}>
-                  <li>Devin MacDougall</li>
                   <li>Brent Mitton (Best Man)</li>
+                  <li>Devin MacDougall</li>
                   <li>Nolan Phillips </li>
                   <li>David Rundle </li>
                 </ul>

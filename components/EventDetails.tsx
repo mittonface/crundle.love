@@ -20,6 +20,22 @@ const EventDetails = ({ eventsDoc }: EventDetailsProps) => {
           <div className="col-md-6 col-lg-4 d-flex "></div>
           <WeddingEvent eventItem={eventsDoc.data!.weddingEvents![1]} />
         </div>
+        <div className="row">
+          <div className="col">
+            <div className="card card-body m-5 ">
+              <div className=" text-center ">
+                <iframe
+                  width="600"
+                  height="450"
+                  style={{ border: 0 }}
+                  loading="lazy"
+                  allowFullScreen
+                  src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJMwfNdJenX0sRDhUWIb9LpUw&key=AIzaSyBFJ6JI8FxM6O8y1K3lXm8HoUw3r_s4H-Y"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
       <div className="curved-decoration ">
         <svg
