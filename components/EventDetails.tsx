@@ -20,10 +20,10 @@ const EventDetails = ({ eventsDoc }: EventDetailsProps) => {
           <div className="col-md-6 col-lg-4 d-flex "></div>
           <WeddingEvent eventItem={eventsDoc.data!.weddingEvents![1]} />
         </div>
-        <div className="row">
+        <div className="row ">
           <div className="col">
-            <div className="card card-body m-5 ">
-              <div className=" text-center ">
+            <div className="card card-body m-5 d-none d-md-block">
+              <div className="text-center">
                 <iframe
                   width="600"
                   height="450"
