@@ -22,16 +22,32 @@ const EventDetails = ({ eventsDoc }: EventDetailsProps) => {
         </div>
         <div className="row ">
           <div className="col">
-            <div className="card card-body m-5 d-none d-md-block">
-              <div className="text-center">
-                <iframe
-                  width="600"
-                  height="450"
-                  style={{ border: 0 }}
-                  loading="lazy"
-                  allowFullScreen
-                  src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJMwfNdJenX0sRDhUWIb9LpUw&key=AIzaSyBFJ6JI8FxM6O8y1K3lXm8HoUw3r_s4H-Y"
-                ></iframe>
+            <div className="card card-body m-5 ">
+              <div className="d-none d-md-block">
+                <div className="text-center">
+                  <iframe
+                    width="600"
+                    height="450"
+                    style={{ border: 0 }}
+                    loading="lazy"
+                    allowFullScreen
+                    src="https://www.google.com/maps/embed/v1/place?q=place_id:ChIJMwfNdJenX0sRDhUWIb9LpUw&key=AIzaSyBFJ6JI8FxM6O8y1K3lXm8HoUw3r_s4H-Y"
+                  ></iframe>
+                </div>
+              </div>
+
+              <div className="d-sm-block d-md-none text-center">
+                <a
+                  href="https://www.google.com/maps/place/The+Grand+Victorian+Wedding+and+Events+Destination/@46.2179322,-63.4952854,17z/data=!3m1!4b1!4m5!3m4!1s0x4b5fa79774cd0733:0x4ca54bbf2116150e!8m2!3d46.2179322!4d-63.4930914"
+                  className="bg-primary rounded p-4 text-white"
+                >
+                  <img
+                    src="./assets/svg/maps.svg"
+                    width={25}
+                    style={{ marginRight: 10 }}
+                  />
+                  Directions
+                </a>
               </div>
             </div>
           </div>
