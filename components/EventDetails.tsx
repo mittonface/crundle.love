@@ -53,6 +53,20 @@ const EventDetails = ({ eventsDoc }: EventDetailsProps) => {
             </div>
           </div>
         </div>
+
+        <div className="row">
+          <div className="col">
+            <div className=" text-center">
+              <p className="text-align-center">
+                <h5>
+                  There will be shuttles provided from the venue to
+                  Charlottetown and Summerside leaving at select times later in
+                  the night.
+                </h5>
+              </p>
+            </div>
+          </div>
+        </div>
         <div className="row ">
           <div className="col">
             <div className="card card-body m-5 ">
