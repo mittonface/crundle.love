@@ -16,9 +16,42 @@ const EventDetails = ({ eventsDoc }: EventDetailsProps) => {
           </div>
         </div>
         <div className="row">
-          <WeddingEvent eventItem={eventsDoc.data!.weddingEvents![0]} />
-          <div className="col-md-6 col-lg-4 d-flex "></div>
-          <WeddingEvent eventItem={eventsDoc.data!.weddingEvents![1]} />
+          <WeddingEvent
+            name="Ceremony"
+            colorScheme="primary"
+            time={
+              <>
+                <h6 className="text-white">3:00pm</h6>{" "}
+                <div className="mb-5 text-white">
+                  <em>Please arrive at 2:30pm to find your seat.</em>
+                </div>
+              </>
+            }
+          />
+          <WeddingEvent
+            name="Cocktail Hour"
+            colorScheme=""
+            time={<h6 className="mb-5">To follow Ceremony</h6>}
+          />
+          <WeddingEvent
+            name="Reception"
+            colorScheme="primary"
+            time={
+              <h6 className="mb-5 text-white">
+                Begins at 5:30pm, dance to follow.
+              </h6>
+            }
+          />
+        </div>
+        <div className="row">
+          <div className="col">
+            <div className="p-5 text-center">
+              <p className="text-align-center">
+                <h4>The Grand Victorian</h4>
+                <h4>106 Nelson St, Victoria, PE</h4>
+              </p>
+            </div>
+          </div>
         </div>
         <div className="row ">
           <div className="col">

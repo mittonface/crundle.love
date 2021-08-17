@@ -4,7 +4,10 @@ import {
 } from "../.tina/__generated__/types";
 
 type WeddingEventProps = {
-  eventItem: Maybe<WeddingEvents_WeddingEvents_Data>;
+  colorScheme: string;
+  name: string;
+  time: React.HTMLProps<any>;
+  description?: string;
 };
 
 const ChurchSvg = () => (
@@ -135,50 +138,32 @@ const PartySvg = () => (
   </svg>
 );
 
-export const WeddingEvent = ({ eventItem }: WeddingEventProps) => {
-  const textClass = eventItem?.colorScheme === "primary" ? " text-white" : "";
+export const WeddingEvent = (props: WeddingEventProps) => {
+  const textClass = props.colorScheme === "primary" ? " text-white" : "";
 
   return (
     <div className="col-md-6 col-lg-4 d-flex ">
       <div
         className={
           `card card-body justify-content-between ` +
-          (eventItem?.colorScheme === "primary" ? " bg-primary text-light" : "")
+          (props.colorScheme === "primary" ? " bg-primary text-light" : "")
         }
       >
         <div
           className={
             `icon-round mb-3 mb-md-5` +
-            (eventItem?.colorScheme === "primary"
+            (props.colorScheme === "primary"
               ? " bg-icon-white"
               : " bg-icon-primary")
           }
         >
-          {eventItem?.name === "Ceremony" && <ChurchSvg />}
-          {eventItem?.name !== "Ceremony" && <PartySvg />}
+          {(props.name === "Ceremony" || props.name == "Reception") && (
+            <ChurchSvg />
+          )}
+          {props.name === "Cocktail Hour" && <PartySvg />}
         </div>
-        <h5 className={`mb-0` + textClass}>{eventItem?.name}</h5>
-        <h6 className={`mb-5` + textClass}>{eventItem?.time}</h6>
-
-        {eventItem?.name === "Ceremony" && (
-          <>
-            <p className="text-align-center">
-              <strong>The Grand Victorian</strong>
-              <br />
-              106 Nelson St, Victoria, PE
-            </p>
-          </>
-        )}
-
-        {eventItem?.name !== "Ceremony" && (
-          <>
-            <p className="text-align-center">
-              <strong>At the same location</strong>
-              <br />
-              &nbsp;
-            </p>
-          </>
-        )}
+        <h5 className={`mb-0` + textClass}>{props.name}</h5>
+        {props.time}
       </div>
     </div>
   );
