@@ -1,9 +1,6 @@
 import { WeddingEvent } from "./WeddingEvent";
-import { WeddingEvents_Document } from "../.tina/__generated__/types";
-type EventDetailsProps = {
-  eventsDoc: WeddingEvents_Document;
-};
-const EventDetails = ({ eventsDoc }: EventDetailsProps) => {
+
+const EventDetails = () => {
   return (
     <section id="wedding" className="bg-secondary spacer-one-top-lg">
       <div className="container spacer-one-bottom-lg">

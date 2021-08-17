@@ -1,8 +1,3 @@
-import {
-  Maybe,
-  WeddingEvents_WeddingEvents_Data,
-} from "../.tina/__generated__/types";
-
 type WeddingEventProps = {
   colorScheme: string;
   name: string;
