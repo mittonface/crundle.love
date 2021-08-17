@@ -164,7 +164,7 @@ const IndexPage = (props: PageQueryResponseType) => {
 
         <Hero heroDoc={props.getHeroDocument} />
         <DateSection dateDoc={props.getDateDocument} />
-        <EventDetails eventsDoc={props.getWeddingEventsDocument} />
+        <EventDetails />
         <Gallery />
         <Registry />
         <WeddingParty />
